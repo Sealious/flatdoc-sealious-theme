@@ -1,0 +1,23 @@
+{
+  "name": "flatdoc-sealious-theme",
+  "version": "0.1.0",
+  "description": "Modified theme from Flatdoc's default white-theme",
+  "main": "style.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "stylus -u ./node_modules/nib ./style.styl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/Sealious/flatdoc-sealious-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sealious/flatdoc-sealious-theme/issues"
+  },
+  "homepage": "https://github.com/Sealious/flatdoc-sealious-theme",
+  "dependencies": {
+    "nib": "^1.1.0"
+  }
+}
