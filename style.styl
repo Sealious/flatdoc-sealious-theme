@@ -50,64 +50,64 @@ $pre-width = 42vw
  */
 
 //Dev
-// @font-face
-//     font-family Lato Regular
-//     font-weight 400
-//     font-style normal
-//     font-stretch normal
-//     src url(../sealious.github.io/styles/fonts/eot/lato-regular.eot)
-//     src url(../sealious.github.io/styles/fonts/woff/lato-regular.woff)
-//     src url(../sealious.github.io/styles/fonts/ttf/lato-regular.ttf)
-//     src url(../sealious.github.io/styles/fonts/otf/lato-regular.otf)
-
-// @font-face
-//     font-family SourceSansProLight
-//     font-weight 300
-//     font-style normal
-//     font-stretch normal
-//     src url(../sealious.github.io/styles/fonts/eot/SourceSansPro-Light.eot)
-//     src url(../sealious.github.io/styles/fonts/woff/SourceSansPro-Light.otf.woff)
-//     src url(../sealious.github.io/styles/fonts/ttf/SourceSansPro-Light.ttf)
-//     src url(../sealious.github.io/styles/fonts/otf/SourceSansPro-Light.otf)
-
-// @font-face
-//     font-family Inconsolata
-//     font-weight 300
-//     font-style normal
-//     font-stretch normal
-//     src url(../sealious.github.io/styles/fonts/woff/inconsolata.woff)
-//     src url(../sealious.github.io/styles/fonts/ttf/inconsolata.ttf)
-//     src url(../sealious.github.io/styles/fonts/otf/inconsolata.otf)
-
-//Production
 @font-face
     font-family Lato Regular
     font-weight 400
     font-style normal
     font-stretch normal
-    src url(../styles/fonts/eot/lato-regular.eot)
-    src url(../styles/fonts/woff/lato-regular.woff)
-    src url(../styles/fonts/ttf/lato-regular.ttf)
-    src url(../styles/fonts/otf/lato-regular.otf)
+    src url(../sealious.github.io/styles/fonts/eot/lato-regular.eot)
+    src url(../sealious.github.io/styles/fonts/woff/lato-regular.woff)
+    src url(../sealious.github.io/styles/fonts/ttf/lato-regular.ttf)
+    src url(../sealious.github.io/styles/fonts/otf/lato-regular.otf)
 
 @font-face
     font-family SourceSansProLight
     font-weight 300
     font-style normal
     font-stretch normal
-    src url(../styles/fonts/eot/SourceSansPro-Light.eot)
-    src url(../styles/fonts/woff/SourceSansPro-Light.otf.woff)
-    src url(../styles/fonts/ttf/SourceSansPro-Light.ttf)
-    src url(../styles/fonts/otf/SourceSansPro-Light.otf)
+    src url(../sealious.github.io/styles/fonts/eot/SourceSansPro-Light.eot)
+    src url(../sealious.github.io/styles/fonts/woff/SourceSansPro-Light.otf.woff)
+    src url(../sealious.github.io/styles/fonts/ttf/SourceSansPro-Light.ttf)
+    src url(../sealious.github.io/styles/fonts/otf/SourceSansPro-Light.otf)
 
 @font-face
     font-family Inconsolata
     font-weight 300
     font-style normal
     font-stretch normal
-    src url(../styles/fonts/woff/inconsolata.woff)
-    src url(../styles/fonts/ttf/inconsolata.ttf)
-    src url(../styles/fonts/otf/inconsolata.otf)
+    src url(../sealious.github.io/styles/fonts/woff/inconsolata.woff)
+    src url(../sealious.github.io/styles/fonts/ttf/inconsolata.ttf)
+    src url(../sealious.github.io/styles/fonts/otf/inconsolata.otf)
+
+//Production
+// @font-face
+//     font-family Lato Regular
+//     font-weight 400
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/eot/lato-regular.eot)
+//     src url(../styles/fonts/woff/lato-regular.woff)
+//     src url(../styles/fonts/ttf/lato-regular.ttf)
+//     src url(../styles/fonts/otf/lato-regular.otf)
+
+// @font-face
+//     font-family SourceSansProLight
+//     font-weight 300
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/eot/SourceSansPro-Light.eot)
+//     src url(../styles/fonts/woff/SourceSansPro-Light.otf.woff)
+//     src url(../styles/fonts/ttf/SourceSansPro-Light.ttf)
+//     src url(../styles/fonts/otf/SourceSansPro-Light.otf)
+
+// @font-face
+//     font-family Inconsolata
+//     font-weight 300
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/woff/inconsolata.woff)
+//     src url(../styles/fonts/ttf/inconsolata.ttf)
+//     src url(../styles/fonts/otf/inconsolata.otf)
     
 
 // ----------------------------------------------------------------------------
@@ -206,13 +206,17 @@ a
 
   i, em
     font-style: italic
-    color: $grey
+    // color: $grey
+    color: hsl(0, 65%, 68%)
+    font-weight: bold
 
   code
     font-family: $mono-font
-    background: $offwhite
+    // background: $offwhite
+    background: #FAFAFA
     // padding: 1px 3px
     font-size: 0.95em
+    color: #183691
 
   pre > code
     display: block
@@ -396,7 +400,7 @@ body.no-literate .content pre > code
 .button
   antialias()
   font-family: SourceSansProLight, sans-serif
-  letter-spacing: -1px
+  letter-spacing: 1px
   font-weight: bold
 
   display: inline-block
@@ -516,7 +520,7 @@ body.no-literate .content pre > code
   .right
     text-align: right
     position: absolute
-    right: -1.6rem
+    right: 0rem
     top: 0.8rem
 
     iframe
