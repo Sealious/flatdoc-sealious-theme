@@ -19,5 +19,7 @@
   "homepage": "https://github.com/Sealious/flatdoc-sealious-theme",
   "dependencies": {
     "nib": "^1.1.0"
+  },
+  "devDependencies": {
   }
 }

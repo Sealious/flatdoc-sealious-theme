@@ -8,27 +8,42 @@ support-for-ie = true
 $body-font = SourceSansProLight, Open Sans, sans-serif
 $mono-font = Inconsolata, monospace
 
-
 // Margins
-$pad = 40px      // Space between things
-$sidepad = 30px  // Padding to the left of the sidebar
-$minipad = 20px  // Space for mobile
-$vmargin = 10px  // Margin between blocks
+// $pad = 40px      // Space between things
+// $sidepad = 30px  // Padding to the left of the sidebar
+// $minipad = 20px  // Space for mobile
+// $vmargin = 10px  // Margin between blocks
+
+$pad = 2rem
+$sidepad = 1rem
+$minipad = 1rem
+$vmargin = 1rem
+
 
 // Colors
-$offwhite = #f3f6fb
-$grey = #9090aa
-$txt = #505050
-$accent = #3cc * 0.85
+// $offwhite = #f3f6fb
+$offwhite = #FFF
+// $grey = #9090aa
+// $grey = #183691
+$grey = #000
+
+$txt = rgb(34, 54, 77)
+// $accent = #3cc * 0.85
+$accent = #0086b3
 $line = #e4e7ec * 0.98
 
 // Misc
 $shadow-str = 0.1
 
-// Dimensions
-$sidebar-width = 230px
-$content-width = 550px
-$pre-width = 380px
+// // Dimensions
+// $sidebar-width = 230px
+$sidebar-width = 12vw
+
+// $content-width = 550px
+// $pre-width = 380px
+$content-width = 42vw
+$pre-width = 42vw
+
 
 /* ----------------------------------------------------------------------------
  * Fonts
@@ -39,29 +54,59 @@ $pre-width = 380px
     font-weight 400
     font-style normal
     font-stretch normal
-    src url(../styles/fonts/eot/lato-regular.eot)
-    src url(../styles/fonts/woff/lato-regular.woff)
-    src url(../styles/fonts/ttf/lato-regular.ttf)
-    src url(../styles/fonts/otf/lato-regular.otf)
+    src url(../sealious.github.io/styles/fonts/eot/lato-regular.eot)
+    src url(../sealious.github.io/styles/fonts/woff/lato-regular.woff)
+    src url(../sealious.github.io/styles/fonts/ttf/lato-regular.ttf)
+    src url(../sealious.github.io/styles/fonts/otf/lato-regular.otf)
 
 @font-face
     font-family SourceSansProLight
     font-weight 300
     font-style normal
     font-stretch normal
-    src url(../styles/fonts/eot/SourceSansPro-Light.eot)
-    src url(../styles/fonts/woff/SourceSansPro-Light.otf.woff)
-    src url(../styles/fonts/ttf/SourceSansPro-Light.ttf)
-    src url(../styles/fonts/otf/SourceSansPro-Light.otf)
+    src url(../sealious.github.io/styles/fonts/eot/SourceSansPro-Light.eot)
+    src url(../sealious.github.io/styles/fonts/woff/SourceSansPro-Light.otf.woff)
+    src url(../sealious.github.io/styles/fonts/ttf/SourceSansPro-Light.ttf)
+    src url(../sealious.github.io/styles/fonts/otf/SourceSansPro-Light.otf)
 
 @font-face
     font-family Inconsolata
     font-weight 300
     font-style normal
     font-stretch normal
-    src url(../styles/fonts/woff/inconsolata.woff)
-    src url(../styles/fonts/ttf/inconsolata.ttf)
-    src url(../styles/fonts/otf/inconsolata.otf)
+    src url(../sealious.github.io/styles/fonts/woff/inconsolata.woff)
+    src url(../sealious.github.io/styles/fonts/ttf/inconsolata.ttf)
+    src url(../sealious.github.io/styles/fonts/otf/inconsolata.otf)
+
+//Production
+// @font-face
+//     font-family Lato Regular
+//     font-weight 400
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/eot/lato-regular.eot)
+//     src url(../styles/fonts/woff/lato-regular.woff)
+//     src url(../styles/fonts/ttf/lato-regular.ttf)
+//     src url(../styles/fonts/otf/lato-regular.otf)
+
+// @font-face
+//     font-family SourceSansProLight
+//     font-weight 300
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/eot/SourceSansPro-Light.eot)
+//     src url(../styles/fonts/woff/SourceSansPro-Light.otf.woff)
+//     src url(../styles/fonts/ttf/SourceSansPro-Light.ttf)
+//     src url(../styles/fonts/otf/SourceSansPro-Light.otf)
+
+// @font-face
+//     font-family Inconsolata
+//     font-weight 300
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/woff/inconsolata.woff)
+//     src url(../styles/fonts/ttf/inconsolata.ttf)
+//     src url(../styles/fonts/otf/inconsolata.otf)
 
 // ----------------------------------------------------------------------------
 // Mixins
@@ -99,11 +144,12 @@ html
 body, td, textarea, input
   font-family: $body-font
   line-height: 1.6
-  font-size: 13px
+  font-size: 1rem
   color:$txt
 
   @media (max-width: 480px) /* Mobile */
-    font-size: 12px
+    // font-size: 12px
+    font-size: 1rem
 
 a
   color: $accent
@@ -163,14 +209,21 @@ a
   code
     font-family: $mono-font
     background: $offwhite
-    padding: 1px 3px
+    // padding: 1px 3px
     font-size: 0.95em
 
   pre > code
     display: block
-    background: transparent
-    font-size: 0.85em
-    letter-spacing: -1px
+    // background: transparent
+    color: #637c84
+    background: #FAFAFA
+    border-bottom: 5px solid hsl(195, 14%, 90%)
+    margin-bottom: -5px
+    padding: 1rem
+    font-size: 0.9em
+    white-space: pre-wrap
+    line-height: 125%
+    overflow-wrap: break-word
 
   blockquote
     :first-child
@@ -263,7 +316,8 @@ a
       display: block
       content: ''
       background: linear-gradient(left, rgba($line, 1.0) 80%, rgba($line, 0.0))
-      box-shadow: 0 1px 0 rgba(white, 0.4)
+      // box-shadow: 0 1px 0 rgba(white, 0.4)
+      box-shadow 0 1px 0 rgba(#637c84, 0.05)
       height: 1px
       position: relative
       top: $pad * -1
@@ -385,8 +439,8 @@ body.no-literate .content pre > code
   body:not(.no-literate)
     .content-root
       background-color: $offwhite
-      $w = ($sidebar-width + $content-width)
-      box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -10px rgba(black, $shadow-str)
+      // $w = ($sidebar-width + $content-width)
+      // box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -10px rgba(black, $shadow-str)
 
 // Literate mode
 @media (min-width: 1180px) /* Big desktop */
@@ -450,7 +504,8 @@ body.no-literate .content pre > code
   padding: 15px 15px 15px $sidepad
   clearfix()
 
-  line-height: 20px
+  // line-height: 20px
+  line-height: 1rem
   position: relative
 
   .left
@@ -459,8 +514,8 @@ body.no-literate .content pre > code
   .right
     text-align: right
     position: absolute
-    right: 15px
-    top: 15px
+    right: -1.6rem
+    top: 0.8rem
 
     iframe
       display: inline-block
@@ -632,21 +687,23 @@ a.big.button
       display: block
       box-sizing: border-box
 
-      absolute: top 10px right $sidepad
+      absolute: top 0.5rem right 1rem
 
-      width: 9px
-      height: 3px
-      border-radius: 2px
+      width: 0.5rem
+      height: 0.5rem
+      border-radius: 100%
       background: $accent
 
 // ----------------------------------------------------------------------------
 // Syntax highlighting
 
 code
+  // color: #637c84
   .string, .number
-    color: #3ac
+    color: #183691
   .init
-    color: #383
+    // color: #383
+    color: #795da3
   .keyword
     font-weight: bold
   .comment
@@ -681,5 +738,3 @@ code
   > div
     position: relative
     z-index: 1
-  
-
