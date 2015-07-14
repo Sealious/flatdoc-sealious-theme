@@ -232,7 +232,6 @@ a:hover {
 .content code {
   font-family: Inconsolata, monospace;
   background: #fff;
-  padding: 1px 3px;
   font-size: 0.95em;
 }
 .content pre > code {
@@ -552,7 +551,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   body:not(.no-literate) .content > h6,
   body:not(.no-literate) .content > pre,
   body:not(.no-literate) .content > blockquote {
-    width: 44vw;
+    width: 42vw;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -567,7 +566,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   }
   body:not(.no-literate) .content > pre,
   body:not(.no-literate) .content > blockquote {
-    width: 40vw;
+    width: 42vw;
     padding-left: 1rem;
     padding-right: 1rem;
     float: right;
@@ -601,7 +600,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   body:not(.no-literate) .content > .small-heading,
   body:not(.big-h3) body:not(.no-literate) .content > h3 {
     margin-left: 2rem;
-    width: 40vw;
+    width: 38vw;
     margin-bottom: 3px;
     padding-left: 0;
     padding-right: 0;
@@ -609,11 +608,11 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   body:not(.no-literate) .content > table {
     margin-left: 2rem;
     margin-right: 2rem;
-    max-width: 40vw;
+    max-width: 38vw;
   }
   body:not(.no-literate):not(.big-h3) .content > h3 {
     margin-left: 2rem;
-    width: 40vw;
+    width: 38vw;
     margin-bottom: 3px;
     padding-left: 0;
     padding-right: 0;
@@ -625,7 +624,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   border-bottom: solid 1px #dfe2e7;
   padding: 15px 15px 15px 1rem;
   zoom: 1;
-  line-height: 20px;
+  line-height: 1rem;
   position: relative;
 }
 .header:before,
@@ -642,8 +641,8 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 .header .right {
   text-align: right;
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: -1.6rem;
+  top: 0.8rem;
 }
 .header .right iframe {
   display: inline-block;
@@ -762,14 +761,14 @@ a.big.button:hover:visited {
 }
 @media (min-width: 768px) {
   .content-root {
-    padding-left: 14vw;
+    padding-left: 12vw;
   }
   .menubar {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 14vw;
+    width: 12vw;
     border-right: solid 1px #dfe2e7;
   }
   .menubar.fixed {

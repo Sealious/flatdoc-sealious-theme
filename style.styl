@@ -37,12 +37,12 @@ $shadow-str = 0.1
 
 // // Dimensions
 // $sidebar-width = 230px
-$sidebar-width = 14vw
+$sidebar-width = 12vw
 
 // $content-width = 550px
 // $pre-width = 380px
-$content-width = 44vw
-$pre-width = 40vw
+$content-width = 42vw
+$pre-width = 42vw
 
 
 /* ----------------------------------------------------------------------------
@@ -77,6 +77,36 @@ $pre-width = 40vw
     src url(../sealious.github.io/styles/fonts/woff/inconsolata.woff)
     src url(../sealious.github.io/styles/fonts/ttf/inconsolata.ttf)
     src url(../sealious.github.io/styles/fonts/otf/inconsolata.otf)
+
+//Production
+// @font-face
+//     font-family Lato Regular
+//     font-weight 400
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/eot/lato-regular.eot)
+//     src url(../styles/fonts/woff/lato-regular.woff)
+//     src url(../styles/fonts/ttf/lato-regular.ttf)
+//     src url(../styles/fonts/otf/lato-regular.otf)
+
+// @font-face
+//     font-family SourceSansProLight
+//     font-weight 300
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/eot/SourceSansPro-Light.eot)
+//     src url(../styles/fonts/woff/SourceSansPro-Light.otf.woff)
+//     src url(../styles/fonts/ttf/SourceSansPro-Light.ttf)
+//     src url(../styles/fonts/otf/SourceSansPro-Light.otf)
+
+// @font-face
+//     font-family Inconsolata
+//     font-weight 300
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/woff/inconsolata.woff)
+//     src url(../styles/fonts/ttf/inconsolata.ttf)
+//     src url(../styles/fonts/otf/inconsolata.otf)
 
 // ----------------------------------------------------------------------------
 // Mixins
@@ -179,7 +209,7 @@ a
   code
     font-family: $mono-font
     background: $offwhite
-    padding: 1px 3px
+    // padding: 1px 3px
     font-size: 0.95em
 
   pre > code
@@ -474,7 +504,8 @@ body.no-literate .content pre > code
   padding: 15px 15px 15px $sidepad
   clearfix()
 
-  line-height: 20px
+  // line-height: 20px
+  line-height: 1rem
   position: relative
 
   .left
@@ -483,8 +514,8 @@ body.no-literate .content pre > code
   .right
     text-align: right
     position: absolute
-    right: 15px
-    top: 15px
+    right: -1.6rem
+    top: 0.8rem
 
     iframe
       display: inline-block
