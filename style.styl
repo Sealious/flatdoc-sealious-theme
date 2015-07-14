@@ -9,28 +9,41 @@ $body-font = SourceSansProLight, Open Sans, sans-serif
 $mono-font = Inconsolata, monospace
 
 // Margins
-$pad = 40px      // Space between things
-$sidepad = 30px  // Padding to the left of the sidebar
-$minipad = 20px  // Space for mobile
-$vmargin = 10px  // Margin between blocks
+// $pad = 40px      // Space between things
+// $sidepad = 30px  // Padding to the left of the sidebar
+// $minipad = 20px  // Space for mobile
+// $vmargin = 10px  // Margin between blocks
+
+$pad = 2rem
+$sidepad = 1rem
+$minipad = 1rem
+$vmargin = 1rem
+
 
 // Colors
-$offwhite = #f3f6fb
+// $offwhite = #f3f6fb
+$offwhite = #FFF
 // $grey = #9090aa
 // $grey = #183691
 $grey = #000
 
 $txt = rgb(34, 54, 77)
-$accent = #3cc * 0.85
+// $accent = #3cc * 0.85
+$accent = #0086b3
 $line = #e4e7ec * 0.98
 
 // Misc
 $shadow-str = 0.1
 
-// Dimensions
-$sidebar-width = 230px
-$content-width = 550px
-$pre-width = 380px
+// // Dimensions
+// $sidebar-width = 230px
+$sidebar-width = 14vw
+
+// $content-width = 550px
+// $pre-width = 380px
+$content-width = 44vw
+$pre-width = 40vw
+
 
 /* ----------------------------------------------------------------------------
  * Fonts
@@ -105,7 +118,8 @@ body, td, textarea, input
   color:$txt
 
   @media (max-width: 480px) /* Mobile */
-    font-size: 12px
+    // font-size: 12px
+    font-size: 1rem
 
 a
   color: $accent
@@ -170,9 +184,16 @@ a
 
   pre > code
     display: block
-    background: transparent
-    font-size: 0.85em
-    letter-spacing: -1px
+    // background: transparent
+    color: #637c84
+    background: #FAFAFA
+    border-bottom: 5px solid hsl(195, 14%, 90%)
+    margin-bottom: -5px
+    padding: 1rem
+    font-size: 0.9em
+    white-space: pre-wrap
+    line-height: 125%
+    overflow-wrap: break-word
 
   blockquote
     :first-child
@@ -265,7 +286,8 @@ a
       display: block
       content: ''
       background: linear-gradient(left, rgba($line, 1.0) 80%, rgba($line, 0.0))
-      box-shadow: 0 1px 0 rgba(white, 0.4)
+      // box-shadow: 0 1px 0 rgba(white, 0.4)
+      box-shadow 0 1px 0 rgba(#637c84, 0.05)
       height: 1px
       position: relative
       top: $pad * -1
@@ -387,8 +409,8 @@ body.no-literate .content pre > code
   body:not(.no-literate)
     .content-root
       background-color: $offwhite
-      $w = ($sidebar-width + $content-width)
-      box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -10px rgba(black, $shadow-str)
+      // $w = ($sidebar-width + $content-width)
+      // box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -10px rgba(black, $shadow-str)
 
 // Literate mode
 @media (min-width: 1180px) /* Big desktop */
@@ -634,21 +656,23 @@ a.big.button
       display: block
       box-sizing: border-box
 
-      absolute: top 10px right $sidepad
+      absolute: top 0.5rem right 1rem
 
-      width: 9px
-      height: 3px
-      border-radius: 2px
+      width: 0.5rem
+      height: 0.5rem
+      border-radius: 100%
       background: $accent
 
 // ----------------------------------------------------------------------------
 // Syntax highlighting
 
 code
+  // color: #637c84
   .string, .number
-    color: #3ac
+    color: #183691
   .init
-    color: #383
+    // color: #383
+    color: #795da3
   .keyword
     font-weight: bold
   .comment
