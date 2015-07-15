@@ -138,7 +138,7 @@ input {
   font-family: SourceSansProLight, Open Sans, sans-serif;
   line-height: 1.6;
   font-size: 1rem;
-  color: #22364d;
+  color: #333;
 }
 @media (max-width: 480px) {
   body,
@@ -299,12 +299,9 @@ a:hover {
   position: relative;
 }
 .content {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
   zoom: 1;
-  max-width: 700px;
+  max-width: 800px;
 }
 .content:before,
 .content:after {
@@ -406,7 +403,7 @@ body:not(.big-h3) .content h3 {
 .content h1:first-child,
 .content h1:first-child a,
 .content h1:first-child a:visited {
-  color: #22364d;
+  color: #333;
 }
 .content h1:first-child:before {
   display: none;
@@ -530,96 +527,6 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 .content .button + em {
   color: #000;
 }
-@media (min-width: 1180px) {
-  body:not(.no-literate) .content-root {
-    background-color: #fff;
-  }
-}
-@media (min-width: 1180px) {
-  body:not(.no-literate) .content {
-    padding-left: 0;
-    padding-right: 0;
-    width: 84vw;
-    max-width: none;
-  }
-  body:not(.no-literate) .content > p,
-  body:not(.no-literate) .content > ul,
-  body:not(.no-literate) .content > ol,
-  body:not(.no-literate) .content > h1,
-  body:not(.no-literate) .content > h2,
-  body:not(.no-literate) .content > h3,
-  body:not(.no-literate) .content > h4,
-  body:not(.no-literate) .content > h5,
-  body:not(.no-literate) .content > h6,
-  body:not(.no-literate) .content > pre,
-  body:not(.no-literate) .content > blockquote {
-    width: 42vw;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-  body:not(.no-literate) .content > h1,
-  body:not(.no-literate) .content > h2,
-  body:not(.no-literate) .content > h3 {
-    clear: both;
-    width: 100%;
-  }
-  body:not(.no-literate) .content > pre,
-  body:not(.no-literate) .content > blockquote {
-    width: 42vw;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    float: right;
-    clear: right;
-  }
-  body:not(.no-literate) .content > pre + p,
-  body:not(.no-literate) .content > blockquote + p,
-  body:not(.no-literate) .content > pre + ul,
-  body:not(.no-literate) .content > blockquote + ul,
-  body:not(.no-literate) .content > pre + ol,
-  body:not(.no-literate) .content > blockquote + ol,
-  body:not(.no-literate) .content > pre + h4,
-  body:not(.no-literate) .content > blockquote + h4,
-  body:not(.no-literate) .content > pre + h5,
-  body:not(.no-literate) .content > blockquote + h5,
-  body:not(.no-literate) .content > pre + h6,
-  body:not(.no-literate) .content > blockquote + h6 {
-    clear: both;
-  }
-  body:not(.no-literate) .content > p,
-  body:not(.no-literate) .content > ul,
-  body:not(.no-literate) .content > ol,
-  body:not(.no-literate) .content > h4,
-  body:not(.no-literate) .content > h5,
-  body:not(.no-literate) .content > h6 {
-    float: left;
-    clear: left;
-  }
-  body:not(.no-literate) .content > h4,
-  body:not(.no-literate) .content > h5,
-  body:not(.no-literate) .content > .small-heading,
-  body:not(.big-h3) body:not(.no-literate) .content > h3 {
-    margin-left: 2rem;
-    width: 38vw;
-    margin-bottom: 3px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  body:not(.no-literate) .content > table {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    max-width: 38vw;
-  }
-  body:not(.no-literate):not(.big-h3) .content > h3 {
-    margin-left: 2rem;
-    width: 38vw;
-    margin-bottom: 3px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 .header {
   background: #fff;
   text-shadow: 0 1px 0 rgba(255,255,255,0.5);
@@ -663,7 +570,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   color: #000;
 }
 .header h1 a:hover {
-  color: #22364d;
+  color: #333;
 }
 .header li a {
   font-size: 0.88em;
@@ -763,14 +670,14 @@ a.big.button:hover:visited {
 }
 @media (min-width: 768px) {
   .content-root {
-    padding-left: 12vw;
+    padding-left: 16vw;
   }
   .menubar {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 12vw;
+    width: 16vw;
     border-right: solid 1px #dfe2e7;
   }
   .menubar.fixed {
@@ -846,7 +753,7 @@ a.big.button:hover:visited {
 .menu a.active,
 .menu a.active:visited,
 .menu a.active:hover {
-  color: #22364d !important;
+  color: #333 !important;
 }
 .menu a.active:after {
   content: '';
@@ -868,10 +775,10 @@ code .number {
   color: #183691;
 }
 code .init {
-  color: #795da3;
+  color: #f5871f;
 }
 code .keyword {
-  font-weight: bold;
+  color: #a71d5d;
 }
 code .comment {
   color: #000;
