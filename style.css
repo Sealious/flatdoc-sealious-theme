@@ -149,11 +149,11 @@ input {
   }
 }
 a {
-  color: #0086b3;
+  color: #0085c7;
   text-decoration: none;
 }
 a:hover {
-  color: #006b8f;
+  color: #2eb9ff;
 }
 /* ----------------------------------------------------------------------------
  * Content styling
@@ -223,11 +223,11 @@ a:hover {
 .content strong,
 .content b {
   font-weight: bold;
+  color: #70c723;
 }
 .content i,
 .content em {
   font-style: italic;
-  color: #e27878;
   font-weight: bold;
 }
 .content code {
@@ -235,6 +235,7 @@ a:hover {
   background: #fafafa;
   font-size: 0.95em;
   color: #183691;
+  font-weight: normal;
 }
 .content pre > code {
   display: block;
@@ -438,6 +439,8 @@ body.no-literate .content pre > code {
   -webkit-border-radius: 2px;
   border-radius: 2px;
   overflow: auto;
+  overflow-wrap: normal;
+  white-space: pre;
 }
 body.no-literate .content pre > code {
   -webkit-overflow-scrolling: touch;
@@ -468,6 +471,8 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
     -webkit-border-radius: 2px;
     border-radius: 2px;
     overflow: auto;
+    overflow-wrap: normal;
+    white-space: pre;
   }
   .content pre > code {
     -webkit-overflow-scrolling: touch;
@@ -496,14 +501,14 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   font-weight: bold;
   display: inline-block;
   padding: 3px 25px;
-  border: solid 2px #0086b3;
+  border: solid 2px #0085c7;
   -webkit-border-radius: 20px;
   border-radius: 20px;
   margin-right: 15px;
 }
 .button,
 .button:visited {
-  background: #0086b3;
+  background: #0085c7;
   color: #fff;
   text-shadow: none;
 }
@@ -640,18 +645,18 @@ a.big.button {
   font-weight: bold;
   font-size: 1.1em;
   background: transparent;
-  border: solid 3px #0086b3;
+  border: solid 3px #0085c7;
   -webkit-border-radius: 30px;
   border-radius: 30px;
   font-family: SourceSansProLight, sans-serif;
 }
 a.big.button,
 a.big.button:visited {
-  color: #0086b3;
+  color: #0085c7;
   text-decoration: none;
 }
 a.big.button:hover {
-  background: #0086b3;
+  background: #0085c7;
 }
 a.big.button:hover,
 a.big.button:hover:visited {
@@ -721,10 +726,10 @@ a.big.button:hover:visited {
 }
 .menu a,
 .menu a:visited {
-  color: #0086b3;
+  color: #0085c7;
 }
 .menu a:hover {
-  color: #006b8f;
+  color: #006a9f;
 }
 .menu a.level-1 {
   font-family: SourceSansProLight, sans-serif;
@@ -768,7 +773,7 @@ a.big.button:hover:visited {
   height: 0.5rem;
   -webkit-border-radius: 100%;
   border-radius: 100%;
-  background: #0086b3;
+  background: #0085c7;
 }
 code .string,
 code .number {

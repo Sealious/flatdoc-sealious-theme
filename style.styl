@@ -31,7 +31,8 @@ $grey = #000
 $txt = #333
 
 // $accent = #3cc * 0.85
-$accent = #0086b3
+$accent = hsl(200, 100%, 39%)
+$accent2 = hsl(200, 100%, 59%)
 $line = #e4e7ec * 0.98
 
 // Misc
@@ -159,7 +160,8 @@ a
   color: $accent
   text-decoration: none
   &:hover
-    color: $accent * 0.8
+    // color: $accent * 0.4
+    color: $accent2
 
 /* ----------------------------------------------------------------------------
  * Content styling
@@ -205,11 +207,12 @@ a
 
   strong, b
     font-weight: bold
+    color: hsl(92, 70%, 46%)
 
   i, em
     font-style: italic
     // color: $grey
-    color: hsl(0, 65%, 68%)
+    // color: hsl(0, 65%, 68%)
     font-weight: bold
 
   code
@@ -219,6 +222,7 @@ a
     // padding: 1px 3px
     font-size: 0.95em
     color: #183691
+    font-weight: normal
 
   pre > code
     display: block
@@ -390,6 +394,10 @@ inset-box()
 
   overflow: auto
   scrollbar($offwhite)
+
+  // changes for wrapping code in mobile
+  overflow-wrap: normal
+  white-space: pre
 
 body.no-literate .content pre > code
   inset-box()
