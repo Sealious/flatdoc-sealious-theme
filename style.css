@@ -137,7 +137,7 @@ textarea,
 input {
   font-family: SourceSansProLight, Open Sans, sans-serif;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.04rem;
   color: #333;
 }
 @media (max-width: 480px) {
@@ -180,6 +180,7 @@ a:hover {
 .content h4,
 .content h5,
 .content h6 {
+  line-height: 3.6rem;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -754,11 +755,6 @@ a.big.button:hover:visited {
 }
 .menu a.active {
   font-weight: bold !important;
-}
-.menu a.active,
-.menu a.active:visited,
-.menu a.active:hover {
-  color: #333 !important;
 }
 .menu a.active:after {
   content: '';

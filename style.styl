@@ -149,7 +149,8 @@ html
 body, td, textarea, input
   font-family: $body-font
   line-height: 1.6
-  font-size: 1rem
+  font-size: 1.04rem
+  // font-size: 1rem
   color:$txt
 
   @media (max-width: 480px) /* Mobile */
@@ -173,6 +174,7 @@ a
     box-sizing: border-box
 
   h1, h2, h3, h4, h5, h6
+    line-height 3.6rem
     font-weight: bold
     antialias()
 
@@ -696,7 +698,7 @@ a.big.button
 
   a.active
     &, &:visited, &:hover
-      color: $txt !important
+      // color: $txt !important
     font-weight: bold !important
     
     // Indicator
