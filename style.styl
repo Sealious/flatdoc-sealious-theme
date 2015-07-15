@@ -150,15 +150,16 @@ html
 
 body, td, textarea, input
   font-family: $body-font
-  line-height: 1.6
+  line-height: 1.7rem
   font-size: 1.04rem
   // font-size: 1rem
   color:$txt
 
-  @media (max-width: 480px) /* Mobile */
+  // @media (max-width: 480px) /* Mobile */
+  @media (max-width: 30rem) /* Mobile */
     // font-size: 12px
     font-size: 1rem
-
+    line-height: 1rem
 a
   color: $accent
   text-decoration: none
@@ -176,7 +177,7 @@ a
     box-sizing: border-box
 
   h1, h2, h3, h4, h5, h6
-    line-height 3.6rem
+    line-height 3rem
     font-weight: bold
     antialias()
 
@@ -223,13 +224,15 @@ a
     // color: $grey
     // color: hsl(0, 65%, 68%)
     font-weight: bold
+    padding-right: 0.2rem
 
   code
     font-family: $mono-font
     // background: $offwhite
     background: #FAFAFA
     // padding: 0.1rem 0.25rem
-    font-size: 0.95em
+    font-size: 0.95rem
+    line-height: 1rem
     color: #183691
     font-weight: normal
     padding-left: 0.4rem
@@ -245,7 +248,7 @@ a
     padding: 1rem
     font-size: 0.9em
     white-space: pre-wrap
-    line-height: 125%
+    line-height: 1rem
     overflow-wrap: break-word
 
   blockquote
@@ -330,9 +333,11 @@ a
     text-transform: uppercase
     letter-spacing: 0.1rem
     font-size: 1.5em
+    line-height: 3rem
 
   h3
     font-size: 1.2em
+    line-height: 3rem
 
   // Lines
   h1, h2, .big-heading
@@ -350,8 +355,9 @@ a
       left: $pad * -1
       width: 100%
 
-    @media (max-width: 768px) /* Mobile and tablet */
-      padding-top: $minipad * 2
+    @media (max-width: 48rem) /* Mobile and tablet */
+      // padding-top: $minipad * 2
+      padding-top: 2.6rem
       &:before
         background: $line
         left: $pad * -1
@@ -368,6 +374,7 @@ a
   body:not(.big-h3) & h3
     @extends .content .small-heading
     font-size: 0.9em
+    line-height: 1rem
 
   body.big-h3 & h3
     @extends .content .big-heading
@@ -379,15 +386,16 @@ a
     &:before
       display: none
 
-@media (max-width: 768px) /* Tablet */
+@media (max-width: 48rem) /* Tablet */
   .content
     h4, h5, .small-heading, body:not(.big-h3) & h3
       padding-top: $vmargin * 2
 
-@media (max-width: 480px) /* Mobile */
+@media (max-width: 30rem) /* Mobile */
   .content
     padding: $minipad
     padding-top: $minipad * 2
+    line-height: 1.7rem
 
     h4, h5, .small-heading, body:not(.big-h3) & h3
       padding-top: $vmargin
@@ -414,7 +422,8 @@ inset-box()
 body.no-literate .content pre > code
   inset-box()
 
-@media (max-width: 1180px) /* Small desktop */
+// @media (max-width: 1180px) /* Small desktop */
+@media (max-width: 74rem) /* Small desktop styling code boxes */
   .content pre > code
     inset-box()
     
@@ -465,7 +474,7 @@ body.no-literate .content pre > code
 // ----------------------------------------------------------------------------
 // Literate mode content
 
-@media (min-width: 1400px) /* Big desktop */
+@media (min-width: 87rem) /* Big desktop */
   body:not(.no-literate)
     .content-root
       background-color: $offwhite
@@ -473,7 +482,7 @@ body.no-literate .content pre > code
       // box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -1rem rgba(black, $shadow-str)
 
 // Literate mode
-@media (min-width: 1400px) /* Big desktop */
+@media (min-width: 87rem) /* Big desktop */
   small-heading()
     margin-left: $pad
     width: $content-width - $pad * 2
@@ -556,6 +565,7 @@ body.no-literate .content pre > code
     font-weight: bold
     font-family: SourceSansProLight, sans-serif
     font-size: 1rem
+    line-height: 1rem
 
     &, a, a:visited
       color: $grey
@@ -563,14 +573,15 @@ body.no-literate .content pre > code
       color: $txt
 
   li a
-    font-size: 0.88em
+    font-size: 0.88rem
+    line-height: 1rem
     color: $grey
     display: block
 
     &:hover
       color: $grey*0.4
 
-  @media (min-width: 480px) /* Tablet & Desktop */
+  @media (min-width: 30rem) /* Tablet & Desktop */
     h1
       float: left
 
@@ -594,7 +605,7 @@ body.no-literate .content pre > code
     li a
       padding: 0 1rem
 
-@media (max-width: 480px) /* Mobile */
+@media (max-width: 30rem) /* Mobile */
   // Hide extra stuff on mobile
   .right
     display: none
@@ -623,7 +634,8 @@ a.big.button
   text-align: center
 
   font-weight: bold
-  font-size: 1.1em
+  font-size: 1.1rem
+  line-height: 2rem
 
   background: transparent
   border: solid 0.25rem $accent
@@ -639,16 +651,16 @@ a.big.button
     &, &:visited
       color: white
 
-@media (max-width: 480px) /* Mobile */
+@media (max-width: 30rem) /* Mobile */
   .menubar
     padding: $minipad
     border-bottom: solid 0.1rem $line
 
-@media (max-width: 768px) /* Mobile and tablet */
+@media (max-width: 48rem) /* Mobile and tablet */
   .menubar
     display: none
 
-@media (min-width: 768px) /* Desktop */
+@media (min-width: 48rem) /* Desktop */
   .content-root
     padding-left: $sidebar-width
 
@@ -667,7 +679,8 @@ a.big.button
     overflow-y: auto
 
 .menubar
-  font-size: 0.9em
+  font-size: 0.9rem
+  line-height: 1rem
 
 // Menu items
 .menu
@@ -691,7 +704,8 @@ a.big.button
   a.level-1
     font-family: SourceSansProLight, sans-serif
     text-transform: uppercase
-    font-size: 0.9em
+    font-size: 0.9rem
+    line-height: 1rem
     font-weight: bold
     &, &:visited
       color: $grey
@@ -704,6 +718,7 @@ a.big.button
   a.level-3
     font-weight: normal
     font-size: 0.9em
+    line-height: 1rem
     padding-left: 1rem
 
   a.active
@@ -717,7 +732,7 @@ a.big.button
       display: block
       box-sizing: border-box
 
-      absolute: top 0.5rem right 1rem
+      absolute: top 0.6rem right 1rem
 
       width: 0.5rem
       height: 0.5rem
@@ -747,8 +762,10 @@ code
 .content
   .large-brief & > h1:first-child + p,
   > p.brief
-    font-size: 1.3em
-    font-family: Open Sans, sans-serif
+    font-size: 1.3rem
+    line-height: 2rem
+    // font-family: Open Sans, sans-serif
+    font-family: $body-font
     font-weight: 300
 
 // ----------------------------------------------------------------------------
