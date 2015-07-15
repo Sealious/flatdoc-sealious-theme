@@ -27,9 +27,12 @@ $offwhite = #FFF
 // $grey = #183691
 $grey = #000
 
-$txt = rgb(34, 54, 77)
+// $txt = rgb(34, 54, 77)
+$txt = #333
+
 // $accent = #3cc * 0.85
-$accent = #0086b3
+$accent = hsl(200, 100%, 39%)
+$accent2 = hsl(200, 100%, 59%)
 $line = #e4e7ec * 0.98
 
 // Misc
@@ -37,7 +40,8 @@ $shadow-str = 0.1
 
 // // Dimensions
 // $sidebar-width = 230px
-$sidebar-width = 12vw
+// $sidebar-width = 16vw
+$sidebar-width = 10rem
 
 // $content-width = 550px
 // $pre-width = 380px
@@ -108,7 +112,7 @@ $pre-width = 42vw
     src url(../styles/fonts/woff/inconsolata.woff)
     src url(../styles/fonts/ttf/inconsolata.ttf)
     src url(../styles/fonts/otf/inconsolata.otf)
-
+    
 // ----------------------------------------------------------------------------
 // Mixins
 
@@ -132,7 +136,7 @@ antialias()
 
 /* ----------------------------------------------------------------------------
  * Base
- */
+*/
 
 global-reset()
 
@@ -145,7 +149,8 @@ html
 body, td, textarea, input
   font-family: $body-font
   line-height: 1.6
-  font-size: 1rem
+  font-size: 1.04rem
+  // font-size: 1rem
   color:$txt
 
   @media (max-width: 480px) /* Mobile */
@@ -156,7 +161,8 @@ a
   color: $accent
   text-decoration: none
   &:hover
-    color: $accent * 0.8
+    // color: $accent * 0.4
+    color: $accent2
 
 /* ----------------------------------------------------------------------------
  * Content styling
@@ -168,6 +174,7 @@ a
     box-sizing: border-box
 
   h1, h2, h3, h4, h5, h6
+    line-height 3.6rem
     font-weight: bold
     antialias()
 
@@ -202,16 +209,22 @@ a
 
   strong, b
     font-weight: bold
+    color: hsl(92, 70%, 46%)
 
   i, em
     font-style: italic
-    color: $grey
+    // color: $grey
+    // color: hsl(0, 65%, 68%)
+    font-weight: bold
 
   code
     font-family: $mono-font
-    background: $offwhite
+    // background: $offwhite
+    background: #FAFAFA
     // padding: 1px 3px
     font-size: 0.95em
+    color: #183691
+    font-weight: normal
 
   pre > code
     display: block
@@ -282,13 +295,15 @@ a
   position: relative
 
 .content
-  padding-top: $pad - $vmargin
-  padding-bottom: $pad
-  padding-left: $pad
-  padding-right: $pad
+  // padding-top: $pad - $vmargin
+  // padding-bottom: $pad
+  // padding-left: $pad
+  // padding-right: $pad
+  padding: $pad
+
   clearfix()
 
-  max-width: 700px
+  max-width: 800px
 
   blockquote
     color: $grey
@@ -382,6 +397,10 @@ inset-box()
   overflow: auto
   scrollbar($offwhite)
 
+  // changes for wrapping code in mobile
+  overflow-wrap: normal
+  white-space: pre
+
 body.no-literate .content pre > code
   inset-box()
 
@@ -395,7 +414,7 @@ body.no-literate .content pre > code
 .button
   antialias()
   font-family: SourceSansProLight, sans-serif
-  letter-spacing: -1px
+  letter-spacing: 1px
   font-weight: bold
 
   display: inline-block
@@ -436,7 +455,7 @@ body.no-literate .content pre > code
 // ----------------------------------------------------------------------------
 // Literate mode content
 
-@media (min-width: 1180px) /* Big desktop */
+@media (min-width: 1400px) /* Big desktop */
   body:not(.no-literate)
     .content-root
       background-color: $offwhite
@@ -444,7 +463,7 @@ body.no-literate .content pre > code
       // box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -10px rgba(black, $shadow-str)
 
 // Literate mode
-@media (min-width: 1180px) /* Big desktop */
+@media (min-width: 1400px) /* Big desktop */
   small-heading()
     margin-left: $pad
     width: $content-width - $pad * 2
@@ -515,7 +534,7 @@ body.no-literate .content pre > code
   .right
     text-align: right
     position: absolute
-    right: -1.6rem
+    right: 0rem
     top: 0.8rem
 
     iframe
@@ -679,7 +698,7 @@ a.big.button
 
   a.active
     &, &:visited, &:hover
-      color: $txt !important
+      // color: $txt !important
     font-weight: bold !important
     
     // Indicator
@@ -704,11 +723,14 @@ code
     color: #183691
   .init
     // color: #383
-    color: #795da3
+    // color: #795da3
+    color: #f5871f
   .keyword
-    font-weight: bold
+    // font-weight: bold
+    color: #a71d5d
   .comment
     color: $grey * 1.2
+
 
 // ----------------------------------------------------------------------------
 
