@@ -40,7 +40,8 @@ $shadow-str = 0.1
 
 // // Dimensions
 // $sidebar-width = 230px
-$sidebar-width = 16vw
+// $sidebar-width = 16vw
+$sidebar-width = 10rem
 
 // $content-width = 550px
 // $pre-width = 380px
@@ -455,64 +456,64 @@ body.no-literate .content pre > code
 // ----------------------------------------------------------------------------
 // Literate mode content
 
-// @media (min-width: 1180px) /* Big desktop */
-//   body:not(.no-literate)
-//     .content-root
-//       background-color: $offwhite
-//       // $w = ($sidebar-width + $content-width)
-//       // box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -10px rgba(black, $shadow-str)
+@media (min-width: 1400px) /* Big desktop */
+  body:not(.no-literate)
+    .content-root
+      background-color: $offwhite
+      // $w = ($sidebar-width + $content-width)
+      // box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -10px rgba(black, $shadow-str)
 
-// // Literate mode
-// @media (min-width: 1180px) /* Big desktop */
-//   small-heading()
-//     margin-left: $pad
-//     width: $content-width - $pad * 2
-//     margin-bottom: 3px
+// Literate mode
+@media (min-width: 1400px) /* Big desktop */
+  small-heading()
+    margin-left: $pad
+    width: $content-width - $pad * 2
+    margin-bottom: 3px
 
-//     padding-left: 0
-//     padding-right: 0
+    padding-left: 0
+    padding-right: 0
 
-//   body:not(.no-literate)
-//     .content
-//       padding-left: 0
-//       padding-right: 0
+  body:not(.no-literate)
+    .content
+      padding-left: 0
+      padding-right: 0
 
-//       width: $content-width + $pre-width
-//       max-width: none
+      width: $content-width + $pre-width
+      max-width: none
 
-//       >
-//         p, ul, ol, h1, h2, h3, h4, h5, h6, pre, blockquote
-//           width: $content-width
-//           box-sizing: border-box
-//           padding-right: $pad
-//           padding-left: $pad
-//         h1, h2, h3
-//           clear: both
-//           width: 100%
-//         pre, blockquote
-//           width: $pre-width
-//           padding-left: ($pad/2)
-//           padding-right: ($pad/2)
-//           float: right
-//           clear: right
-//           +
-//             p, ul, ol, h4, h5, h6
-//               clear: both
-//         p, ul, ol, h4, h5, h6
-//           float: left
-//           clear: left
+      >
+        p, ul, ol, h1, h2, h3, h4, h5, h6, pre, blockquote
+          width: $content-width
+          box-sizing: border-box
+          padding-right: $pad
+          padding-left: $pad
+        h1, h2, h3
+          clear: both
+          width: 100%
+        pre, blockquote
+          width: $pre-width
+          padding-left: ($pad/2)
+          padding-right: ($pad/2)
+          float: right
+          clear: right
+          +
+            p, ul, ol, h4, h5, h6
+              clear: both
+        p, ul, ol, h4, h5, h6
+          float: left
+          clear: left
 
-//         h4, h5, .small-heading, body:not(.big-h3) & h3
-//           small-heading()
+        h4, h5, .small-heading, body:not(.big-h3) & h3
+          small-heading()
 
-//         table
-//           margin-left: $pad
-//           margin-right: $pad
-//           max-width: $content-width - $pad*2
+        table
+          margin-left: $pad
+          margin-right: $pad
+          max-width: $content-width - $pad*2
 
-//   body:not(.no-literate):not(.big-h3)
-//     .content > h3
-//       small-heading()
+  body:not(.no-literate):not(.big-h3)
+    .content > h3
+      small-heading()
 
 // ----------------------------------------------------------------------------
 // Header
