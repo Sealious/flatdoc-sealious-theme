@@ -11,8 +11,8 @@ $mono-font = Inconsolata, monospace
 // Margins
 // $pad = 40px      // Space between things
 // $sidepad = 30px  // Padding to the left of the sidebar
-// $minipad = 2rem  // Space for mobile
-// $vmargin = 1rem  // Margin between blocks
+// $minipad = 20px  // Space for mobile
+// $vmargin = 10px  // Margin between blocks
 
 $pad = 2rem
 $sidepad = 1rem
@@ -54,64 +54,64 @@ $pre-width = 42vw
  */
 
 //Dev
-// @font-face
-//     font-family Lato Regular
-//     font-weight 400
-//     font-style normal
-//     font-stretch normal
-//     src url(../sealious.github.io/styles/fonts/eot/lato-regular.eot)
-//     src url(../sealious.github.io/styles/fonts/woff/lato-regular.woff)
-//     src url(../sealious.github.io/styles/fonts/ttf/lato-regular.ttf)
-//     src url(../sealious.github.io/styles/fonts/otf/lato-regular.otf)
-
-// @font-face
-//     font-family SourceSansProLight
-//     font-weight 300
-//     font-style normal
-//     font-stretch normal
-//     src url(../sealious.github.io/styles/fonts/eot/SourceSansPro-Light.eot)
-//     src url(../sealious.github.io/styles/fonts/woff/SourceSansPro-Light.otf.woff)
-//     src url(../sealious.github.io/styles/fonts/ttf/SourceSansPro-Light.ttf)
-//     src url(../sealious.github.io/styles/fonts/otf/SourceSansPro-Light.otf)
-
-// @font-face
-//     font-family Inconsolata
-//     font-weight 300
-//     font-style normal
-//     font-stretch normal
-//     src url(../sealious.github.io/styles/fonts/woff/inconsolata.woff)
-//     src url(../sealious.github.io/styles/fonts/ttf/inconsolata.ttf)
-//     src url(../sealious.github.io/styles/fonts/otf/inconsolata.otf)
-
-//Production
 @font-face
     font-family Lato Regular
     font-weight 400
     font-style normal
     font-stretch normal
-    src url(../styles/fonts/eot/lato-regular.eot)
-    src url(../styles/fonts/woff/lato-regular.woff)
-    src url(../styles/fonts/ttf/lato-regular.ttf)
-    src url(../styles/fonts/otf/lato-regular.otf)
+    src url(../sealious.github.io/styles/fonts/eot/lato-regular.eot)
+    src url(../sealious.github.io/styles/fonts/woff/lato-regular.woff)
+    src url(../sealious.github.io/styles/fonts/ttf/lato-regular.ttf)
+    src url(../sealious.github.io/styles/fonts/otf/lato-regular.otf)
 
 @font-face
     font-family SourceSansProLight
     font-weight 300
     font-style normal
     font-stretch normal
-    src url(../styles/fonts/eot/SourceSansPro-Light.eot)
-    src url(../styles/fonts/woff/SourceSansPro-Light.otf.woff)
-    src url(../styles/fonts/ttf/SourceSansPro-Light.ttf)
-    src url(../styles/fonts/otf/SourceSansPro-Light.otf)
+    src url(../sealious.github.io/styles/fonts/eot/SourceSansPro-Light.eot)
+    src url(../sealious.github.io/styles/fonts/woff/SourceSansPro-Light.otf.woff)
+    src url(../sealious.github.io/styles/fonts/ttf/SourceSansPro-Light.ttf)
+    src url(../sealious.github.io/styles/fonts/otf/SourceSansPro-Light.otf)
 
 @font-face
     font-family Inconsolata
     font-weight 300
     font-style normal
     font-stretch normal
-    src url(../styles/fonts/woff/inconsolata.woff)
-    src url(../styles/fonts/ttf/inconsolata.ttf)
-    src url(../styles/fonts/otf/inconsolata.otf)
+    src url(../sealious.github.io/styles/fonts/woff/inconsolata.woff)
+    src url(../sealious.github.io/styles/fonts/ttf/inconsolata.ttf)
+    src url(../sealious.github.io/styles/fonts/otf/inconsolata.otf)
+
+//Production
+// @font-face
+//     font-family Lato Regular
+//     font-weight 400
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/eot/lato-regular.eot)
+//     src url(../styles/fonts/woff/lato-regular.woff)
+//     src url(../styles/fonts/ttf/lato-regular.ttf)
+//     src url(../styles/fonts/otf/lato-regular.otf)
+
+// @font-face
+//     font-family SourceSansProLight
+//     font-weight 300
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/eot/SourceSansPro-Light.eot)
+//     src url(../styles/fonts/woff/SourceSansPro-Light.otf.woff)
+//     src url(../styles/fonts/ttf/SourceSansPro-Light.ttf)
+//     src url(../styles/fonts/otf/SourceSansPro-Light.otf)
+
+// @font-face
+//     font-family Inconsolata
+//     font-weight 300
+//     font-style normal
+//     font-stretch normal
+//     src url(../styles/fonts/woff/inconsolata.woff)
+//     src url(../styles/fonts/ttf/inconsolata.ttf)
+//     src url(../styles/fonts/otf/inconsolata.otf)
     
 // ----------------------------------------------------------------------------
 // Mixins
@@ -120,17 +120,15 @@ scrollbar($bg=white)
   &
     -webkit-overflow-scrolling: touch
   &::-webkit-scrollbar
-    // width: 15px
-    // height: 15px
-    width: 1rem
-    height: 1rem
+    width: 15px
+    height: 15px
   &::-webkit-scrollbar-thumb
     background: #ddd
-    border-radius: 0.4rem
-    border: solid 0.2rem $bg
+    border-radius: 8px
+    border: solid 4px $bg
   &:hover::-webkit-scrollbar-thumb
     background: #999
-    box-shadow: inset 0.1rem 0.1rem 0.15rem rgba(0, 0, 0, 0.2)
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2)
 
 antialias()
   -webkit-font-smoothing: antialiased
@@ -150,16 +148,15 @@ html
 
 body, td, textarea, input
   font-family: $body-font
-  line-height: 1.7rem
+  line-height: 1.6
   font-size: 1.04rem
   // font-size: 1rem
   color:$txt
 
-  // @media (max-width: 480px) /* Mobile */
-  @media (max-width: 30rem) /* Mobile */
+  @media (max-width: 480px) /* Mobile */
     // font-size: 12px
     font-size: 1rem
-    line-height: 1rem
+
 a
   color: $accent
   text-decoration: none
@@ -177,7 +174,7 @@ a
     box-sizing: border-box
 
   h1, h2, h3, h4, h5, h6
-    line-height 3rem
+    line-height 3.6rem
     font-weight: bold
     antialias()
 
@@ -191,8 +188,7 @@ a
     list-style-type: decimal
 
   ul, ol
-    // margin-left: 2rem
-    margin-left: 2rem
+    margin-left: 20px
 
   ul > li
     list-style-type: none
@@ -200,17 +196,13 @@ a
     &:before
       content: ''
       display: block
-      // absolute: left -17px top 7px
-      // width: 5px
-      // height: 5px
-      // border-radius: 4px
-      absolute: left -1rem top 0.7rem
-      width: 0.4rem
-      height: 0.4rem
-      border-radius: 0.5rem
+      absolute: left -17px top 7px
+      width: 5px
+      height: 5px
+      border-radius: 4px
       box-sizing: border-box
       background: white
-      border: solid 0.1rem $grey
+      border: solid 1px $grey
 
   li > :first-child
     padding-top: 0
@@ -224,15 +216,13 @@ a
     // color: $grey
     // color: hsl(0, 65%, 68%)
     font-weight: bold
-    padding-right: 0.2rem
 
   code
     font-family: $mono-font
     // background: $offwhite
     background: #FAFAFA
-    // padding: 0.1rem 0.25rem
-    font-size: 0.95rem
-    line-height: 1rem
+    // padding: 1px 3px
+    font-size: 0.95em
     color: #183691
     font-weight: normal
     padding-left: 0.4rem
@@ -243,12 +233,12 @@ a
     // background: transparent
     color: #637c84
     background: #FAFAFA
-    border-bottom: 0.25rem solid hsl(195, 14%, 90%)
-    margin-bottom: -0.25rem
+    border-bottom: 5px solid hsl(195, 14%, 90%)
+    margin-bottom: -5px
     padding: 1rem
     font-size: 0.9em
     white-space: pre-wrap
-    line-height: 1rem
+    line-height: 125%
     overflow-wrap: break-word
 
   blockquote
@@ -266,7 +256,7 @@ a
     clear: both
 
     tr
-      border-top: 0.1rem solid #cccccc
+      border-top: 1px solid #cccccc
       background-color: white
       margin: 0
       padding: 0
@@ -277,15 +267,15 @@ a
       th
         text-align: auto;
         font-weight: bold
-        border: 0.1rem solid #cccccc
+        border: 1px solid #cccccc
         margin: 0
-        padding: 0.5rem 1rem
+        padding: 6px 13px
 
       td
         text-align: auto;
-        border: 0.1rem solid #cccccc
+        border: 1px solid #cccccc
         margin: 0
-        padding: 0.5rem 1rem
+        padding: 6px 13px
 
       th, td
         :first-child
@@ -315,11 +305,11 @@ a
 
   clearfix()
 
-  max-width: 60rem
+  max-width: 800px
 
   blockquote
     color: $grey
-    text-shadow: 0 0.1rem 0 rgba(white, 0.5)
+    text-shadow: 0 1px 0 rgba(white, 0.5)
 
   h1, h2, h3
     antialias()
@@ -327,17 +317,15 @@ a
     padding-bottom: 0
 
     + p, ul, ol
-      padding-top: 1rem
+      padding-top: 10px
 
   h1, h2
     text-transform: uppercase
-    letter-spacing: 0.1rem
+    letter-spacing: 1px
     font-size: 1.5em
-    line-height: 3rem
 
   h3
     font-size: 1.2em
-    line-height: 3rem
 
   // Lines
   h1, h2, .big-heading
@@ -346,18 +334,16 @@ a
       display: block
       content: ''
       background: linear-gradient(left, rgba($line, 1.0) 80%, rgba($line, 0.0))
-      // box-shadow: 0 0.1rem 0 rgba(white, 0.4)
-      box-shadow 0 0.1rem 0 rgba(#637c84, 0.05)
-      // height: 0.06rem
+      // box-shadow: 0 1px 0 rgba(white, 0.4)
+      box-shadow 0 1px 0 rgba(#637c84, 0.05)
       height: 1px
       position: relative
       top: $pad * -1
       left: $pad * -1
       width: 100%
 
-    @media (max-width: 48rem) /* Mobile and tablet */
-      // padding-top: $minipad * 2
-      padding-top: 2.6rem
+    @media (max-width: 768px) /* Mobile and tablet */
+      padding-top: $minipad * 2
       &:before
         background: $line
         left: $pad * -1
@@ -366,15 +352,14 @@ a
 
   // Small headings
   h4, h5, .small-heading
-    border-bottom: solid 0.1rem rgba(black, 0.07)
+    border-bottom: solid 1px rgba(black, 0.07)
     color: $grey
     padding-top: $vmargin * 3
-    padding-bottom: 0.625rem
+    padding-bottom: 10px
 
   body:not(.big-h3) & h3
     @extends .content .small-heading
     font-size: 0.9em
-    line-height: 1rem
 
   body.big-h3 & h3
     @extends .content .big-heading
@@ -386,16 +371,15 @@ a
     &:before
       display: none
 
-@media (max-width: 48rem) /* Tablet */
+@media (max-width: 768px) /* Tablet */
   .content
     h4, h5, .small-heading, body:not(.big-h3) & h3
       padding-top: $vmargin * 2
 
-@media (max-width: 30rem) /* Mobile */
+@media (max-width: 480px) /* Mobile */
   .content
     padding: $minipad
     padding-top: $minipad * 2
-    line-height: 1.7rem
 
     h4, h5, .small-heading, body:not(.big-h3) & h3
       padding-top: $vmargin
@@ -405,12 +389,12 @@ a
 
 inset-box()
   background: $offwhite
-  border: solid 0.1rem $offwhite*0.95
-  border-top: solid 0.1rem $offwhite*0.9
-  border-left: solid 0.1rem $offwhite*0.93
+  border: solid 1px $offwhite*0.95
+  border-top: solid 1px $offwhite*0.9
+  border-left: solid 1px $offwhite*0.93
   display: block
-  padding: 0.625rem
-  border-radius: 0.25rem
+  padding: 10px
+  border-radius: 2px
 
   overflow: auto
   scrollbar($offwhite)
@@ -422,8 +406,7 @@ inset-box()
 body.no-literate .content pre > code
   inset-box()
 
-// @media (max-width: 1180px) /* Small desktop */
-@media (max-width: 74rem) /* Small desktop styling code boxes */
+@media (max-width: 1180px) /* Small desktop */
   .content pre > code
     inset-box()
     
@@ -433,16 +416,16 @@ body.no-literate .content pre > code
 .button
   antialias()
   font-family: SourceSansProLight, sans-serif
-  letter-spacing: 0.1rem
+  letter-spacing: 1px
   font-weight: bold
 
   display: inline-block
-  padding: 0.25rem 2rem
+  padding: 3px 25px
 
-  border: solid 0.25rem $accent
-  border-radius: 1.5rem
+  border: solid 2px $accent
+  border-radius: 20px
 
-  margin-right: 1rem
+  margin-right: 15px
 
   &, &:visited
     background: $accent
@@ -474,19 +457,19 @@ body.no-literate .content pre > code
 // ----------------------------------------------------------------------------
 // Literate mode content
 
-@media (min-width: 87rem) /* Big desktop */
+@media (min-width: 1400px) /* Big desktop */
   body:not(.no-literate)
     .content-root
       background-color: $offwhite
       // $w = ($sidebar-width + $content-width)
-      // box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -1rem rgba(black, $shadow-str)
+      // box-shadow: inset $w 0 white, inset ($w + 1) 0 $line, inset ($w + 10) 0 5px -10px rgba(black, $shadow-str)
 
 // Literate mode
-@media (min-width: 87rem) /* Big desktop */
+@media (min-width: 1400px) /* Big desktop */
   small-heading()
     margin-left: $pad
     width: $content-width - $pad * 2
-    margin-bottom: 0.25rem
+    margin-bottom: 3px
 
     padding-left: 0
     padding-right: 0
@@ -538,12 +521,12 @@ body.no-literate .content pre > code
 
 .header
   background: $offwhite
-  text-shadow: 0 0.1rem 0 rgba(white, 0.5)
-  border-bottom: solid 0.1rem $line
-  padding: 1rem 1rem 1rem $sidepad
+  text-shadow: 0 1px 0 rgba(white, 0.5)
+  border-bottom: solid 1px $line
+  padding: 15px 15px 15px $sidepad
   clearfix()
 
-  // line-height: 2rem
+  // line-height: 20px
   line-height: 1rem
   position: relative
 
@@ -564,8 +547,7 @@ body.no-literate .content pre > code
     antialias()
     font-weight: bold
     font-family: SourceSansProLight, sans-serif
-    font-size: 1rem
-    line-height: 1rem
+    font-size: 13px
 
     &, a, a:visited
       color: $grey
@@ -573,15 +555,14 @@ body.no-literate .content pre > code
       color: $txt
 
   li a
-    font-size: 0.88rem
-    line-height: 1rem
+    font-size: 0.88em
     color: $grey
     display: block
 
     &:hover
       color: $grey*0.4
 
-  @media (min-width: 30rem) /* Tablet & Desktop */
+  @media (min-width: 480px) /* Tablet & Desktop */
     h1
       float: left
 
@@ -590,22 +571,22 @@ body.no-literate .content pre > code
       float: left
 
     ul
-      margin-left: -1rem
+      margin-left: -15px
 
     h1 + ul
-      border-left: solid 0.1rem $line
-      margin-left: 1rem
+      border-left: solid 1px $line
+      margin-left: 15px
 
     li
-      border-left: solid 0.1rem rgba(white, 0.5)
-      border-right: solid 0.1rem $line
+      border-left: solid 1px rgba(white, 0.5)
+      border-right: solid 1px $line
       &:last-child
         border-right: 0
 
     li a
-      padding: 0 1rem
+      padding: 0 15px
 
-@media (max-width: 30rem) /* Mobile */
+@media (max-width: 480px) /* Mobile */
   // Hide extra stuff on mobile
   .right
     display: none
@@ -620,7 +601,7 @@ body.no-literate .content pre > code
     box-sizing: border-box
 
   .section + .section
-    border-top: solid 0.1rem $line
+    border-top: solid 1px $line
 
   .section.no-line
     border-top: 0
@@ -630,16 +611,15 @@ a.big.button
   display: block
   box-sizing: border-box
   width: 100%
-  padding: 1rem 2rem
+  padding: 10px 20px
   text-align: center
 
   font-weight: bold
-  font-size: 1.1rem
-  line-height: 2rem
+  font-size: 1.1em
 
   background: transparent
-  border: solid 0.25rem $accent
-  border-radius: 2rem
+  border: solid 3px $accent
+  border-radius: 30px
   font-family: SourceSansProLight, sans-serif
 
   &, &:visited
@@ -651,16 +631,16 @@ a.big.button
     &, &:visited
       color: white
 
-@media (max-width: 30rem) /* Mobile */
+@media (max-width: 480px) /* Mobile */
   .menubar
     padding: $minipad
-    border-bottom: solid 0.1rem $line
+    border-bottom: solid 1px $line
 
-@media (max-width: 48rem) /* Mobile and tablet */
+@media (max-width: 768px) /* Mobile and tablet */
   .menubar
     display: none
 
-@media (min-width: 48rem) /* Desktop */
+@media (min-width: 768px) /* Desktop */
   .content-root
     padding-left: $sidebar-width
 
@@ -670,7 +650,7 @@ a.big.button
     top: 0
     bottom: 0
     width: $sidebar-width
-    border-right: solid 0.1rem $line
+    border-right: solid 1px $line
 
   .menubar.fixed
     position: fixed
@@ -679,21 +659,20 @@ a.big.button
     overflow-y: auto
 
 .menubar
-  font-size: 0.9rem
-  line-height: 1rem
+  font-size: 0.9em
 
 // Menu items
 .menu
   ul.level-1 > li + li
-    margin-top: 2rem
+    margin-top: 20px
 
   a
     box-sizing: border-box
     position: relative
 
     display: block
-    padding-top: 0.1rem
-    padding-bottom: 0.1rem
+    padding-top: 1px
+    padding-bottom: 1px
     margin-right: ($sidepad * -1)
 
     &, &:visited
@@ -704,8 +683,7 @@ a.big.button
   a.level-1
     font-family: SourceSansProLight, sans-serif
     text-transform: uppercase
-    font-size: 0.9rem
-    line-height: 1rem
+    font-size: 0.9em
     font-weight: bold
     &, &:visited
       color: $grey
@@ -718,8 +696,7 @@ a.big.button
   a.level-3
     font-weight: normal
     font-size: 0.9em
-    line-height: 1rem
-    padding-left: 1rem
+    padding-left: 10px
 
   a.active
     &, &:visited, &:hover
@@ -732,7 +709,7 @@ a.big.button
       display: block
       box-sizing: border-box
 
-      absolute: top 0.6rem right 1rem
+      absolute: top 0.5rem right 1rem
 
       width: 0.5rem
       height: 0.5rem
@@ -762,21 +739,18 @@ code
 .content
   .large-brief & > h1:first-child + p,
   > p.brief
-    font-size: 1.3rem
-    line-height: 2rem
-    // font-family: Open Sans, sans-serif
-    font-family: $body-font
+    font-size: 1.3em
+    font-family: Open Sans, sans-serif
     font-weight: 300
 
 // ----------------------------------------------------------------------------
 
 .title-area
-  // min-height: 100px
-  min-height: 10rem
+  min-height: 100px
   box-sizing: border-box
   antialias()
   text-align: center
-  border-bottom: solid 0.1rem $line
+  border-bottom: solid 1px $line
   overflow: hidden
 
   > img.bg
