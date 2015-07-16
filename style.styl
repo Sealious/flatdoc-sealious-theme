@@ -150,7 +150,7 @@ html
 
 body, td, textarea, input
   font-family: $body-font
-  line-height: 1.7rem
+  line-height: 1.5rem
   font-size: 1.04rem
   // font-size: 1rem
   color:$txt
@@ -217,13 +217,12 @@ a
 
   strong, b
     font-weight: bold
-    color: hsl(92, 70%, 46%)
+    color: hsl(92, 70%, 40%)
 
   i, em
     font-style: italic
     // color: $grey
     // color: hsl(0, 65%, 68%)
-    font-weight: bold
     padding-right: 0.2rem
 
   code
@@ -395,7 +394,7 @@ a
   .content
     padding: $minipad
     padding-top: $minipad * 2
-    line-height: 1.7rem
+    line-height: 1.5rem
 
     h4, h5, .small-heading, body:not(.big-h3) & h3
       padding-top: $vmargin
@@ -610,6 +609,7 @@ body.no-literate .content pre > code
   .right
     display: none
 
+
 // ----------------------------------------------------------------------------
 // Sidebar
 
@@ -655,6 +655,13 @@ a.big.button
   .menubar
     padding: $minipad
     border-bottom: solid 0.1rem $line
+
+  .header
+    li a
+      font-size: 1rem
+      line-height: 2rem
+      color: $grey
+      display: block
 
 @media (max-width: 48rem) /* Mobile and tablet */
   .menubar
