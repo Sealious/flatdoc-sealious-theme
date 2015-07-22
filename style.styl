@@ -14,7 +14,8 @@ $mono-font = Inconsolata, monospace
 // $minipad = 2rem  // Space for mobile
 // $vmargin = 1rem  // Margin between blocks
 
-$pad = 2rem
+// $pad = 2rem
+$pad = 1.5rem
 $sidepad = 1rem
 $minipad = 1rem
 $vmargin = 1rem
@@ -41,12 +42,14 @@ $shadow-str = 0.1
 // // Dimensions
 // $sidebar-width = 230px
 // $sidebar-width = 16vw
-$sidebar-width = 10rem
+$sidebar-width = 14rem
 
 // $content-width = 550px
 // $pre-width = 380px
 $content-width = 42vw
 $pre-width = 42vw
+
+$regularity-value = 1.5rem
 
 
 /* ----------------------------------------------------------------------------
@@ -150,7 +153,7 @@ html
 
 body, td, textarea, input
   font-family: $body-font
-  line-height: 1.5rem
+  line-height: $regularity-value
   font-size: 1.04rem
   // font-size: 1rem
   color:$txt
@@ -173,11 +176,12 @@ a
 
 .content
   p, ul, ol, h1, h2, h3, h4, h5, h6, pre, blockquote
-    padding: $vmargin 0
+    // padding: $vmargin 0
+    line-height: $regularity-value
     box-sizing: border-box
 
   h1, h2, h3, h4, h5, h6
-    line-height 3rem
+    // line-height $regularity-value * 2
     font-weight: bold
     antialias()
 
@@ -216,14 +220,16 @@ a
     padding-top: 0
 
   strong, b
+    line-height: $regularity-value
     font-weight: bold
-    color: hsl(92, 70%, 40%)
+    // color: hsl(92, 70%, 40%)
 
   i, em
     font-style: italic
     // color: $grey
     // color: hsl(0, 65%, 68%)
     padding-right: 0.2rem
+    line-height: $regularity-value
 
   code
     font-family: $mono-font
@@ -243,7 +249,9 @@ a
     color: #637c84
     background: #FAFAFA
     border-bottom: 0.25rem solid hsl(195, 14%, 90%)
-    margin-bottom: -0.25rem
+    // margin-bottom: -0.25rem
+    // margin-top: $regularity-value
+    margin-bottom: $regularity-value
     padding: 1rem
     font-size: 0.9em
     white-space: pre-wrap
@@ -251,6 +259,7 @@ a
     overflow-wrap: break-word
 
   blockquote
+    line-height: $regularity-value
     :first-child
       padding-top: 0
     :last-child
@@ -306,11 +315,8 @@ a
   position: relative
 
 .content
-  // padding-top: $pad - $vmargin
-  // padding-bottom: $pad
-  // padding-left: $pad
-  // padding-right: $pad
-  padding: $pad
+  padding-left: 1.5rem
+  padding-top: 1rem
 
   clearfix()
 
@@ -326,54 +332,60 @@ a
     padding-bottom: 0
 
     + p, ul, ol
-      padding-top: 1rem
+      // padding-top: 1rem
 
-  h1, h2
+  h1
     text-transform: uppercase
     letter-spacing: 0.1rem
-    font-size: 1.5em
-    line-height: 3rem
+    font-size: 1.8rem
+    line-height: $regularity-value * 3
+
+  h2
+    // text-transform: uppercase
+    letter-spacing: 0.1rem
+    font-size: 1.4rem
+    padding-top: $regularity-value
+    line-height: $regularity-value * 2
 
   h3
-    font-size: 1.2em
-    line-height: 3rem
+    font-size: 1.2rem
+    line-height: $regularity-value * 2
 
   // Lines
   h1, h2, .big-heading
-    padding-top: $pad * 2
-    &:before
-      display: block
-      content: ''
-      background: linear-gradient(left, rgba($line, 1.0) 80%, rgba($line, 0.0))
-      // box-shadow: 0 0.1rem 0 rgba(white, 0.4)
-      box-shadow 0 0.1rem 0 rgba(#637c84, 0.05)
-      // height: 0.06rem
-      height: 1px
-      position: relative
-      top: $pad * -1
-      left: $pad * -1
-      width: 100%
+    // padding-top: $pad * 2
+    // line-height: $regularity-value * 3
+    // &:before
+    //   display: block
+    //   content: ''
+    //   background: linear-gradient(left, rgba($line, 1.0) 80%, rgba($line, 0.0))
+    //   box-shadow: 0 0.1rem 0 rgba(white, 0.4)
+    //   box-shadow 0 0.1rem 0 rgba(#637c84, 0.05)
+    //   height: 0.06rem
+    //   height: 1px
+    //   position: relative
+    //   top: $pad * -1
+    //   left: $pad * -1
+    //   width: 100%
 
     @media (max-width: 48rem) /* Mobile and tablet */
       // padding-top: $minipad * 2
-      padding-top: 2.6rem
-      &:before
-        background: $line
-        left: $pad * -1
-        top: $minipad * -1
-        width: 120%
+      // padding-top: 2.6rem
+      // &:before
+      //   background: $line
+      //   left: $pad * -1
+      //   top: $minipad * -1
+      //   width: 120%
 
   // Small headings
   h4, h5, .small-heading
-    border-bottom: solid 0.1rem rgba(black, 0.07)
-    color: $grey
-    padding-top: $vmargin * 3
-    padding-bottom: 0.625rem
+    padding-top: $regularity-value
+    line-height: $regularity-value * 2
 
   body:not(.big-h3) & h3
     @extends .content .small-heading
-    font-size: 0.9em
-    line-height: 1rem
+    // font-size: 0.9em
+    // line-height: $regularity-value * 2
 
   body.big-h3 & h3
     @extends .content .big-heading
@@ -410,6 +422,7 @@ inset-box()
   display: block
   padding: 0.625rem
   border-radius: 0.25rem
+  margin-bottom: 1.5rem
 
   overflow: auto
   scrollbar($offwhite)
