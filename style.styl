@@ -336,37 +336,37 @@ a
 
   h1
     text-transform: uppercase
-    letter-spacing: 0.1rem
-    font-size: 1.8rem
+    font-size: 2.5rem
     line-height: $regularity-value * 3
 
   h2
     // text-transform: uppercase
-    letter-spacing: 0.1rem
-    font-size: 1.4rem
-    padding-top: $regularity-value
-    line-height: $regularity-value * 2
+    font-size: 2rem
+    line-height: $regularity-value * 3
 
   h3
-    font-size: 1.2rem
+    font-size: 1.5rem
+    line-height: $regularity-value * 2
+
+  h4
+    font-size: 1.25rem
+    line-height: $regularity-value * 2
+
+  h5
+    font-size: 1.20rem
+    line-height: $regularity-value * 2
+
+  h6
+    font-size: 1.1rem
     line-height: $regularity-value * 2
 
   // Lines
-  h1, h2, .big-heading
-    // padding-top: $pad * 2
-    // line-height: $regularity-value * 3
-    // &:before
-    //   display: block
-    //   content: ''
-    //   background: linear-gradient(left, rgba($line, 1.0) 80%, rgba($line, 0.0))
-    //   box-shadow: 0 0.1rem 0 rgba(white, 0.4)
-    //   box-shadow 0 0.1rem 0 rgba(#637c84, 0.05)
-    //   height: 0.06rem
-    //   height: 1px
-    //   position: relative
-    //   top: $pad * -1
-    //   left: $pad * -1
-    //   width: 100%
+  // h1, h2, .big-heading
+  h1, .big-heading
+    &:after
+      display: block
+      content: ''
+      border-bottom: 0.1rem solid #e2e7e9
 
     @media (max-width: 48rem) /* Mobile and tablet */
       // padding-top: $minipad * 2
@@ -378,7 +378,7 @@ a
       //   width: 120%
 
   // Small headings
-  h4, h5, .small-heading
+  .small-heading
     padding-top: $regularity-value
     line-height: $regularity-value * 2
 
