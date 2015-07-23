@@ -335,22 +335,36 @@ a:hover {
 }
 .content h1 {
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   line-height: 4.5rem;
 }
 .content h2 {
-  letter-spacing: 0.1rem;
-  font-size: 1.4rem;
-  padding-top: 1.5rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 4.5rem;
 }
 .content h3 {
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+.content h4 {
+  font-size: 1.25rem;
+  line-height: 3rem;
+}
+.content h5 {
   font-size: 1.2rem;
   line-height: 3rem;
 }
-.content h4,
-.content h5,
+.content h6 {
+  font-size: 1.1rem;
+  line-height: 3rem;
+}
+.content h1:after,
+.content .big-heading:after,
+body.big-h3 .content h3:after {
+  display: block;
+  content: '';
+  border-bottom: 0.1rem solid #e2e7e9;
+}
 .content .small-heading,
 body:not(.big-h3) .content h3 {
   padding-top: 1.5rem;
