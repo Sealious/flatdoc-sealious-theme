@@ -50,6 +50,7 @@ $content-width = 42vw
 $pre-width = 42vw
 
 $regularity-value = 1.5rem
+$complement = 0.25rem
 
 
 /* ----------------------------------------------------------------------------
@@ -57,64 +58,64 @@ $regularity-value = 1.5rem
  */
 
 //Dev
-@font-face
-    font-family Lato Regular
-    font-weight 400
-    font-style normal
-    font-stretch normal
-    src url(../sealious.github.io/styles/fonts/eot/lato-regular.eot)
-    src url(../sealious.github.io/styles/fonts/woff/lato-regular.woff)
-    src url(../sealious.github.io/styles/fonts/ttf/lato-regular.ttf)
-    src url(../sealious.github.io/styles/fonts/otf/lato-regular.otf)
-
-@font-face
-    font-family SourceSansProLight
-    font-weight 300
-    font-style normal
-    font-stretch normal
-    src url(../sealious.github.io/styles/fonts/eot/SourceSansPro-Light.eot)
-    src url(../sealious.github.io/styles/fonts/woff/SourceSansPro-Light.otf.woff)
-    src url(../sealious.github.io/styles/fonts/ttf/SourceSansPro-Light.ttf)
-    src url(../sealious.github.io/styles/fonts/otf/SourceSansPro-Light.otf)
-
-@font-face
-    font-family Inconsolata
-    font-weight 300
-    font-style normal
-    font-stretch normal
-    src url(../sealious.github.io/styles/fonts/woff/inconsolata.woff)
-    src url(../sealious.github.io/styles/fonts/ttf/inconsolata.ttf)
-    src url(../sealious.github.io/styles/fonts/otf/inconsolata.otf)
-
-//Production
 // @font-face
 //     font-family Lato Regular
 //     font-weight 400
 //     font-style normal
 //     font-stretch normal
-//     src url(../styles/fonts/eot/lato-regular.eot)
-//     src url(../styles/fonts/woff/lato-regular.woff)
-//     src url(../styles/fonts/ttf/lato-regular.ttf)
-//     src url(../styles/fonts/otf/lato-regular.otf)
+//     src url(../sealious.github.io/styles/fonts/eot/lato-regular.eot)
+//     src url(../sealious.github.io/styles/fonts/woff/lato-regular.woff)
+//     src url(../sealious.github.io/styles/fonts/ttf/lato-regular.ttf)
+//     src url(../sealious.github.io/styles/fonts/otf/lato-regular.otf)
 
 // @font-face
 //     font-family SourceSansProLight
 //     font-weight 300
 //     font-style normal
 //     font-stretch normal
-//     src url(../styles/fonts/eot/SourceSansPro-Light.eot)
-//     src url(../styles/fonts/woff/SourceSansPro-Light.otf.woff)
-//     src url(../styles/fonts/ttf/SourceSansPro-Light.ttf)
-//     src url(../styles/fonts/otf/SourceSansPro-Light.otf)
+//     src url(../sealious.github.io/styles/fonts/eot/SourceSansPro-Light.eot)
+//     src url(../sealious.github.io/styles/fonts/woff/SourceSansPro-Light.otf.woff)
+//     src url(../sealious.github.io/styles/fonts/ttf/SourceSansPro-Light.ttf)
+//     src url(../sealious.github.io/styles/fonts/otf/SourceSansPro-Light.otf)
 
 // @font-face
 //     font-family Inconsolata
 //     font-weight 300
 //     font-style normal
 //     font-stretch normal
-//     src url(../styles/fonts/woff/inconsolata.woff)
-//     src url(../styles/fonts/ttf/inconsolata.ttf)
-//     src url(../styles/fonts/otf/inconsolata.otf)
+//     src url(../sealious.github.io/styles/fonts/woff/inconsolata.woff)
+//     src url(../sealious.github.io/styles/fonts/ttf/inconsolata.ttf)
+//     src url(../sealious.github.io/styles/fonts/otf/inconsolata.otf)
+
+//Production
+@font-face
+    font-family Lato Regular
+    font-weight 400
+    font-style normal
+    font-stretch normal
+    src url(../styles/fonts/eot/lato-regular.eot)
+    src url(../styles/fonts/woff/lato-regular.woff)
+    src url(../styles/fonts/ttf/lato-regular.ttf)
+    src url(../styles/fonts/otf/lato-regular.otf)
+
+@font-face
+    font-family SourceSansProLight
+    font-weight 300
+    font-style normal
+    font-stretch normal
+    src url(../styles/fonts/eot/SourceSansPro-Light.eot)
+    src url(../styles/fonts/woff/SourceSansPro-Light.otf.woff)
+    src url(../styles/fonts/ttf/SourceSansPro-Light.ttf)
+    src url(../styles/fonts/otf/SourceSansPro-Light.otf)
+
+@font-face
+    font-family Inconsolata
+    font-weight 300
+    font-style normal
+    font-stretch normal
+    src url(../styles/fonts/woff/inconsolata.woff)
+    src url(../styles/fonts/ttf/inconsolata.ttf)
+    src url(../styles/fonts/otf/inconsolata.otf)
     
 // ----------------------------------------------------------------------------
 // Mixins
@@ -147,14 +148,14 @@ global-reset()
 
 html, body
   height: 100%
+  font-size: 1.04rem
+  line-height: $regularity-value
 
 html
   overflow-x: hidden
 
 body, td, textarea, input
   font-family: $body-font
-  line-height: $regularity-value
-  font-size: 1.04rem
   // font-size: 1rem
   color:$txt
 
@@ -177,7 +178,7 @@ a
 .content
   p, ul, ol, h1, h2, h3, h4, h5, h6, pre, blockquote
     // padding: $vmargin 0
-    line-height: $regularity-value
+    // line-height: $regularity-value
     box-sizing: border-box
 
   h1, h2, h3, h4, h5, h6
@@ -250,8 +251,8 @@ a
     background: #FAFAFA
     border-bottom: 0.25rem solid hsl(195, 14%, 90%)
     // margin-bottom: -0.25rem
-    margin-top: $regularity-value
-    margin-bottom: $regularity-value
+    margin-top: 1rem
+    margin-bottom: 1rem
     padding: 1rem
     font-size: 0.9em
     white-space: pre-wrap
@@ -315,12 +316,15 @@ a
   position: relative
 
 .content
-  padding-left: 1.5rem
+  padding-left: $regularity-value
+  padding-right: $regularity-value
   padding-top: 1rem
 
   clearfix()
 
-  max-width: 60rem
+  // max-width: 60rem
+  max-width: 43rem
+  display: block
 
   blockquote
     color: $grey
@@ -337,34 +341,43 @@ a
   h1
     text-transform: uppercase
     font-size: 2.5rem
-    line-height: $regularity-value * 3
+    line-height: $regularity-value * 2
+    margin-top: $complement * 4
+    margin-bottom: $complement * 4
+
+    //0.25rem
 
   h2
     // text-transform: uppercase
     font-size: 2rem
-    padding-top: $regularity-value
-    line-height: $regularity-value * 3
+    line-height: $regularity-value * 2
+    margin-top: $complement * 4
+    margin-bottom: $complement * 4
 
   h3
     font-size: 1.5rem
-    padding-top: $regularity-value
     line-height: $regularity-value * 2
+    margin-top: $complement * 2
+    margin-bottom: $complement * 2
 
   h4
-    padding-top: $regularity-value
     font-size: 1.25rem
     line-height: $regularity-value * 2
+    margin-top: $complement * 2
+    margin-bottom: $complement * 2
 
   h5
-    padding-top: $regularity-value
     font-size: 1.20rem
-    line-height: $regularity-value * 2
-
+    line-height: $regularity-value
+    margin-top: $complement
+    margin-bottom: $complement
+  
   h6
-    padding-top: $regularity-value
     font-size: 1.1rem
-    line-height: $regularity-value * 2
-
+    line-height: $regularity-value
+    margin-top: $complement
+    margin-bottom: $complement
+    
   // Lines
   // h1, h2, .big-heading
   h1, .big-heading
@@ -387,16 +400,15 @@ a
 
   // Small headings
   .small-heading
-    padding-top: $regularity-value
-    line-height: $regularity-value * 2
+    // line-height: $regularity-value
 
-  body:not(.big-h3) & h3
-    @extends .content .small-heading
-    // font-size: 0.9em
-    // line-height: $regularity-value * 2
+  // body:not(.big-h3) & h3
+  //   @extends .content .small-heading
+  //   // font-size: 0.9em
+  //   // line-height: $regularity-value * 2
 
-  body.big-h3 & h3
-    @extends .content .big-heading
+  // body.big-h3 & h3
+  //   @extends .content .big-heading
 
   h1:first-child
     padding-top: 0
@@ -408,16 +420,16 @@ a
 @media (max-width: 48rem) /* Tablet */
   .content
     h4, h5, .small-heading, body:not(.big-h3) & h3
-      padding-top: $vmargin * 2
+      // padding-top: $vmargin * 2
 
 @media (max-width: 30rem) /* Mobile */
   .content
     padding: $minipad
     padding-top: $minipad * 2
-    line-height: 1.5rem
+    line-height: $regularity-value
 
     h4, h5, .small-heading, body:not(.big-h3) & h3
-      padding-top: $vmargin
+      // padding-top: $vmargin
 
 // ----------------------------------------------------------------------------
 // Code blocks
@@ -430,7 +442,7 @@ inset-box()
   display: block
   padding: 0.625rem
   border-radius: 0.25rem
-  margin-bottom: 1.5rem
+  // margin-bottom: 1.5rem
 
   overflow: auto
   scrollbar($offwhite)
