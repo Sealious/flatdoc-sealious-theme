@@ -180,6 +180,9 @@ a
     // padding: $vmargin 0
     // line-height: $regularity-value
     box-sizing: border-box
+  
+
+
 
   h1, h2, h3, h4, h5, h6
     // line-height $regularity-value * 2
@@ -235,7 +238,7 @@ a
   code
     font-family: $mono-font
     // background: $offwhite
-    background: #FAFAFA
+    background: #F7F7F7
     // padding: 0.1rem 0.25rem
     font-size: 0.95rem
     line-height: 1rem
@@ -247,8 +250,10 @@ a
   pre > code
     display: block
     // background: transparent
-    color: #637c84
-    background: #FAFAFA
+    // color: #637c84
+    color: #586E75
+    background: #F7F7F7
+    // background: #EEE8D5
     border-bottom: 0.25rem solid hsl(195, 14%, 90%)
     // margin-bottom: -0.25rem
     margin-top: 1rem
@@ -327,8 +332,28 @@ a
   display: block
 
   blockquote
-    color: $grey
-    text-shadow: 0 0.1rem 0 rgba(white, 0.5)
+    background: #F7F7F7
+    padding: $complement * 2
+    margin-top $complement * 4
+    margin-bottom: $complement * 4
+    
+    // color: $grey
+    // text-shadow: 0 0.1rem 0 rgba(white, 0.5)
+
+  blockquote:before
+    content: '\201C'
+    margin-right: $complement
+
+  blockquote:after
+    content: '\201D'
+    margin-left: $complement
+
+  blockquote:after, blockquote:before
+    color: #586E75
+    font-size: 1.4rem
+    position: relative
+    font-family: monospace
+    position: relative
 
   h1, h2, h3
     antialias()
@@ -435,13 +460,13 @@ a
 // Code blocks
 
 inset-box()
-  background: $offwhite
-  border: solid 0.1rem $offwhite*0.95
-  border-top: solid 0.1rem $offwhite*0.9
-  border-left: solid 0.1rem $offwhite*0.93
+  // background: $offwhite
+  // border: solid 0.1rem $offwhite*0.95
+  // border-top: solid 0.1rem $offwhite*0.9
+  // border-left: solid 0.1rem $offwhite*0.93
   display: block
-  padding: 0.625rem
-  border-radius: 0.25rem
+  // padding: 0.625rem
+  // border-radius: 0.25rem
   // margin-bottom: 1.5rem
 
   overflow: auto
@@ -787,18 +812,21 @@ a.big.button
 
 code
   // color: #637c84
-  .string, .number
-    color: #183691
+  // color: #93A1A1
+  // color: #586E75
+  .string
+    // color: #183691
+    color: #2AA198
+  .number
+    color: #6C71C4
   .init
     // color: #383
     // color: #795da3
-    color: #f5871f
+    color: #B58900
   .keyword
-    // font-weight: bold
-    color: #a71d5d
+    color: #268BD2
   .comment
     color: $grey * 1.2
-
 
 // ----------------------------------------------------------------------------
 

@@ -233,7 +233,7 @@ a:hover {
 }
 .content code {
   font-family: Inconsolata, monospace;
-  background: #fafafa;
+  background: #f7f7f7;
   font-size: 0.95rem;
   line-height: 1rem;
   color: #183691;
@@ -243,8 +243,8 @@ a:hover {
 }
 .content pre > code {
   display: block;
-  color: #637c84;
-  background: #fafafa;
+  color: #586e75;
+  background: #f7f7f7;
   border-bottom: 0.25rem solid #e2e7e9;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -324,8 +324,26 @@ a:hover {
   clear: both;
 }
 .content blockquote {
-  color: #000;
-  text-shadow: 0 0.1rem 0 rgba(255,255,255,0.5);
+  background: #f7f7f7;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.content blockquote:before {
+  content: '\201C';
+  margin-right: 0.25rem;
+}
+.content blockquote:after {
+  content: '\201D';
+  margin-left: 0.25rem;
+}
+.content blockquote:after,
+.content blockquote:before {
+  color: #586e75;
+  font-size: 1.4rem;
+  position: relative;
+  font-family: monospace;
+  position: relative;
 }
 .content h1,
 .content h2,
@@ -403,14 +421,7 @@ a:hover {
   }
 }
 body.no-literate .content pre > code {
-  background: #fff;
-  border: solid 0.1rem #f2f2f2;
-  border-top: solid 0.1rem #e6e6e6;
-  border-left: solid 0.1rem #ededed;
   display: block;
-  padding: 0.625rem;
-  -webkit-border-radius: 0.25rem;
-  border-radius: 0.25rem;
   overflow: auto;
   overflow-wrap: normal;
   white-space: pre;
@@ -435,14 +446,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 }
 @media (max-width: 74rem) {
   .content pre > code {
-    background: #fff;
-    border: solid 0.1rem #f2f2f2;
-    border-top: solid 0.1rem #e6e6e6;
-    border-left: solid 0.1rem #ededed;
     display: block;
-    padding: 0.625rem;
-    -webkit-border-radius: 0.25rem;
-    border-radius: 0.25rem;
     overflow: auto;
     overflow-wrap: normal;
     white-space: pre;
@@ -724,15 +728,17 @@ a.big.button:hover:visited {
   border-radius: 100%;
   background: #0085c7;
 }
-code .string,
+code .string {
+  color: #2aa198;
+}
 code .number {
-  color: #183691;
+  color: #6c71c4;
 }
 code .init {
-  color: #f5871f;
+  color: #b58900;
 }
 code .keyword {
-  color: #a71d5d;
+  color: #268bd2;
 }
 code .comment {
   color: #000;
