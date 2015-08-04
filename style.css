@@ -6,29 +6,29 @@
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  src: url("../styles/fonts/eot/lato-regular.eot");
-  src: url("../styles/fonts/woff/lato-regular.woff");
-  src: url("../styles/fonts/ttf/lato-regular.ttf");
-  src: url("../styles/fonts/otf/lato-regular.otf");
+  src: url("../sealious.github.io/styles/fonts/eot/lato-regular.eot");
+  src: url("../sealious.github.io/styles/fonts/woff/lato-regular.woff");
+  src: url("../sealious.github.io/styles/fonts/ttf/lato-regular.ttf");
+  src: url("../sealious.github.io/styles/fonts/otf/lato-regular.otf");
 }
 @font-face {
   font-family: SourceSansProLight;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
-  src: url("../styles/fonts/eot/SourceSansPro-Light.eot");
-  src: url("../styles/fonts/woff/SourceSansPro-Light.otf.woff");
-  src: url("../styles/fonts/ttf/SourceSansPro-Light.ttf");
-  src: url("../styles/fonts/otf/SourceSansPro-Light.otf");
+  src: url("../sealious.github.io/styles/fonts/eot/SourceSansPro-Light.eot");
+  src: url("../sealious.github.io/styles/fonts/woff/SourceSansPro-Light.otf.woff");
+  src: url("../sealious.github.io/styles/fonts/ttf/SourceSansPro-Light.ttf");
+  src: url("../sealious.github.io/styles/fonts/otf/SourceSansPro-Light.otf");
 }
 @font-face {
   font-family: Inconsolata;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
-  src: url("../styles/fonts/woff/inconsolata.woff");
-  src: url("../styles/fonts/ttf/inconsolata.ttf");
-  src: url("../styles/fonts/otf/inconsolata.otf");
+  src: url("../sealious.github.io/styles/fonts/woff/inconsolata.woff");
+  src: url("../sealious.github.io/styles/fonts/ttf/inconsolata.ttf");
+  src: url("../sealious.github.io/styles/fonts/otf/inconsolata.otf");
 }
 /* ----------------------------------------------------------------------------
  * Base
@@ -124,10 +124,12 @@ td {
 a img {
   border: none;
 }
+html {
+  font-size: 1.04rem;
+}
 html,
 body {
   height: 100%;
-  font-size: 1.04rem;
   line-height: 1.5rem;
 }
 html {
@@ -159,6 +161,9 @@ a:hover {
 /* ----------------------------------------------------------------------------
  * Content styling
  */
+.content * + * {
+  margin-top: 1rem;
+}
 .content p,
 .content ul,
 .content ol,
@@ -192,6 +197,9 @@ a:hover {
 }
 .content ol > li {
   list-style-type: decimal;
+}
+.content ul {
+  margin-top: 0;
 }
 .content ul,
 .content ol {
@@ -246,7 +254,6 @@ a:hover {
   color: #586e75;
   background: #f7f7f7;
   border-bottom: 0.25rem solid #e2e7e9;
-  margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
   font-size: 0.9em;
@@ -324,26 +331,10 @@ a:hover {
   clear: both;
 }
 .content blockquote {
-  background: #f7f7f7;
-  padding: 0.5rem;
+  padding-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-.content blockquote:before {
-  content: '\201C';
-  margin-right: 0.25rem;
-}
-.content blockquote:after {
-  content: '\201D';
-  margin-left: 0.25rem;
-}
-.content blockquote:after,
-.content blockquote:before {
-  color: #586e75;
-  font-size: 1.4rem;
-  position: relative;
-  font-family: monospace;
-  position: relative;
+  border-left: 0.25rem solid #e2e7e9;
 }
 .content h1,
 .content h2,
@@ -361,22 +352,23 @@ a:hover {
   margin-bottom: 1rem;
 }
 .content h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 3rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
 }
 .content h3 {
   font-size: 1.5rem;
   line-height: 3rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
 }
 .content h4 {
   font-size: 1.25rem;
-  line-height: 3rem;
-  margin-top: 0.5rem;
+  line-height: 1.5rem;
+  margin-top: 2.5rem;
   margin-bottom: 0.5rem;
+}
+.content h4 + * {
+  margin-top: 0;
 }
 .content h5 {
   font-size: 1.2rem;
@@ -630,14 +622,14 @@ a.big.button:hover:visited {
 }
 @media (min-width: 48rem) {
   .content-root {
-    padding-left: 14rem;
+    padding-left: 13rem;
   }
   .menubar {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 14rem;
+    width: 13rem;
     border-right: solid 0.1rem #dfe2e7;
   }
   .menubar.fixed {
@@ -713,20 +705,16 @@ a.big.button:hover:visited {
 .menu a.active {
   font-weight: bold !important;
 }
-.menu a.active:after {
-  content: '';
+.menu a.active:before {
+  content: "\2192";
   display: block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
-  top: 0.6rem;
-  right: 1rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  background: #0085c7;
+  top: 0rem;
+  left: -0.8rem;
+  font-size: 0.9rem;
 }
 code .string {
   color: #2aa198;
