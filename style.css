@@ -127,6 +127,8 @@ a img {
 html,
 body {
   height: 100%;
+  font-size: 1.04rem;
+  line-height: 1.5rem;
 }
 html {
   overflow-x: hidden;
@@ -136,8 +138,6 @@ td,
 textarea,
 input {
   font-family: SourceSansProLight, Open Sans, sans-serif;
-  line-height: 1.5rem;
-  font-size: 1.04rem;
   color: #333;
 }
 @media (max-width: 30rem) {
@@ -170,7 +170,6 @@ a:hover {
 .content h6,
 .content pre,
 .content blockquote {
-  line-height: 1.5rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -234,7 +233,7 @@ a:hover {
 }
 .content code {
   font-family: Inconsolata, monospace;
-  background: #fafafa;
+  background: #f7f7f7;
   font-size: 0.95rem;
   line-height: 1rem;
   color: #183691;
@@ -244,11 +243,11 @@ a:hover {
 }
 .content pre > code {
   display: block;
-  color: #637c84;
-  background: #fafafa;
+  color: #586e75;
+  background: #f7f7f7;
   border-bottom: 0.25rem solid #e2e7e9;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   font-size: 0.9em;
   white-space: pre-wrap;
@@ -310,9 +309,11 @@ a:hover {
 }
 .content {
   padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-top: 1rem;
   zoom: 1;
-  max-width: 60rem;
+  max-width: 43rem;
+  display: block;
 }
 .content:before,
 .content:after {
@@ -323,8 +324,26 @@ a:hover {
   clear: both;
 }
 .content blockquote {
-  color: #000;
-  text-shadow: 0 0.1rem 0 rgba(255,255,255,0.5);
+  background: #f7f7f7;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.content blockquote:before {
+  content: '\201C';
+  margin-right: 0.25rem;
+}
+.content blockquote:after {
+  content: '\201D';
+  margin-left: 0.25rem;
+}
+.content blockquote:after,
+.content blockquote:before {
+  color: #586e75;
+  font-size: 1.4rem;
+  position: relative;
+  font-family: monospace;
+  position: relative;
 }
 .content h1,
 .content h2,
@@ -337,44 +356,51 @@ a:hover {
 .content h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
-  line-height: 4.5rem;
+  line-height: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .content h2 {
   font-size: 2rem;
-  padding-top: 1.5rem;
   line-height: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .content h3 {
   font-size: 1.5rem;
-  padding-top: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .content h4 {
-  padding-top: 1.5rem;
   font-size: 1.25rem;
   line-height: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .content h5 {
-  padding-top: 1.5rem;
   font-size: 1.2rem;
-  line-height: 3rem;
+  line-height: 1.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 .content h6 {
-  padding-top: 1.5rem;
   font-size: 1.1rem;
-  line-height: 3rem;
+  line-height: 1.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 .content h1:after,
-.content .big-heading:after,
-body.big-h3 .content h3:after {
+.content .big-heading:after {
   display: block;
   content: '';
   border-bottom: 0.1rem solid #e2e7e9;
 }
-.content .small-heading,
-body:not(.big-h3) .content h3 {
-  padding-top: 1.5rem;
-  line-height: 3rem;
+.content h1,
+.content h2,
+.content h3,
+.content .big-heading {
+  text-indent: -1px;
 }
 .content h1:first-child {
   padding-top: 0;
@@ -387,37 +413,15 @@ body:not(.big-h3) .content h3 {
 .content h1:first-child:before {
   display: none;
 }
-@media (max-width: 48rem) {
-  .content h4,
-  .content h5,
-  .content .small-heading,
-  body:not(.big-h3) .content h3 {
-    padding-top: 2rem;
-  }
-}
 @media (max-width: 30rem) {
   .content {
     padding: 1rem;
     padding-top: 2rem;
     line-height: 1.5rem;
   }
-  .content h4,
-  .content h5,
-  .content .small-heading,
-  body:not(.big-h3) .content h3 {
-    padding-top: 1rem;
-  }
 }
 body.no-literate .content pre > code {
-  background: #fff;
-  border: solid 0.1rem #f2f2f2;
-  border-top: solid 0.1rem #e6e6e6;
-  border-left: solid 0.1rem #ededed;
   display: block;
-  padding: 0.625rem;
-  -webkit-border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  margin-bottom: 1.5rem;
   overflow: auto;
   overflow-wrap: normal;
   white-space: pre;
@@ -442,15 +446,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 }
 @media (max-width: 74rem) {
   .content pre > code {
-    background: #fff;
-    border: solid 0.1rem #f2f2f2;
-    border-top: solid 0.1rem #e6e6e6;
-    border-left: solid 0.1rem #ededed;
     display: block;
-    padding: 0.625rem;
-    -webkit-border-radius: 0.25rem;
-    border-radius: 0.25rem;
-    margin-bottom: 1.5rem;
     overflow: auto;
     overflow-wrap: normal;
     white-space: pre;
@@ -732,15 +728,17 @@ a.big.button:hover:visited {
   border-radius: 100%;
   background: #0085c7;
 }
-code .string,
+code .string {
+  color: #2aa198;
+}
 code .number {
-  color: #183691;
+  color: #6c71c4;
 }
 code .init {
-  color: #f5871f;
+  color: #b58900;
 }
 code .keyword {
-  color: #a71d5d;
+  color: #268bd2;
 }
 code .comment {
   color: #000;
