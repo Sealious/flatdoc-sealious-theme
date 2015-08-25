@@ -758,3 +758,13 @@ code .comment {
   position: relative;
   z-index: 1;
 }
+h4,
+h4 ~ p,
+h4 ~ pre {
+  margin-left: 0;
+}
+h5,
+h5 ~ p,
+h5 ~ pre {
+  margin-left: 5rem;
+}
