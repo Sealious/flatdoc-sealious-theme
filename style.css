@@ -125,12 +125,12 @@ a img {
   border: none;
 }
 html {
-  font-size: 1.04rem;
+  font-size: 1.5em;
 }
 html,
 body {
   height: 100%;
-  line-height: 1.5rem;
+  line-height: 1rem;
 }
 html {
   overflow-x: hidden;
@@ -230,14 +230,14 @@ a:hover {
 }
 .content strong,
 .content b {
-  line-height: 1.5rem;
+  line-height: 1rem;
   font-weight: bold;
 }
 .content i,
 .content em {
   font-style: italic;
   padding-right: 0.2rem;
-  line-height: 1.5rem;
+  line-height: 1rem;
 }
 .content code {
   font-family: Inconsolata, monospace;
@@ -262,7 +262,7 @@ a:hover {
   overflow-wrap: break-word;
 }
 .content blockquote {
-  line-height: 1.5rem;
+  line-height: 1rem;
 }
 .content blockquote :first-child {
   padding-top: 0;
@@ -315,8 +315,8 @@ a:hover {
   position: relative;
 }
 .content {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 1rem;
   zoom: 1;
   max-width: 43rem;
@@ -347,23 +347,26 @@ a:hover {
 .content h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
-  line-height: 3rem;
+  line-height: 1rem;
+  *: 2;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .content h2 {
   font-size: 2.2rem;
-  line-height: 3rem;
+  line-height: 1rem;
+  *: 2;
   margin-top: 1.5rem;
 }
 .content h3 {
   font-size: 1.5rem;
-  line-height: 3rem;
+  line-height: 1rem;
+  *: 2;
   margin-top: 1.5rem;
 }
 .content h4 {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1rem;
   margin-top: 2.5rem;
   margin-bottom: 0.5rem;
 }
@@ -372,13 +375,13 @@ a:hover {
 }
 .content h5 {
   font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin-top: 0.25rem;
+  line-height: 1rem;
   margin-bottom: 0.25rem;
+  margin-top: 2rem;
 }
 .content h6 {
   font-size: 1.1rem;
-  line-height: 1.5rem;
+  line-height: 1rem;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
@@ -409,7 +412,7 @@ a:hover {
   .content {
     padding: 1rem;
     padding-top: 2rem;
-    line-height: 1.5rem;
+    line-height: 1rem;
   }
 }
 body.no-literate .content pre > code {

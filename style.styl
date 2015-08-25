@@ -27,7 +27,6 @@ $sidebar-width = 13rem
 $content-width = 42vw
 $pre-width = 42vw
 
-$regularity-value = 1.5rem
 $complement = 0.25rem
 
 /* ----------------------------------------------------------------------------
@@ -122,11 +121,11 @@ antialias()
 global-reset()
 
 html
-  font-size: 1.04rem
+  font-size: 1.5em;
 
 html, body
   height: 100%
-  line-height: $regularity-value
+  line-height: 1rem;
 
 html
   overflow-x: hidden
@@ -193,13 +192,13 @@ a
     padding-top: 0
 
   strong, b
-    line-height: $regularity-value
+    line-height: 1rem;
     font-weight: bold
 
   i, em
     font-style: italic
     padding-right: 0.2rem
-    line-height: $regularity-value
+    line-height: 1rem;
 
   code
     font-family: $mono-font
@@ -224,7 +223,7 @@ a
     overflow-wrap: break-word
 
   blockquote
-    line-height: $regularity-value
+    line-height: 1rem;
     :first-child
       padding-top: 0
     :last-child
@@ -275,8 +274,8 @@ a
   position: relative
 
 .content
-  padding-left: $regularity-value
-  padding-right: $regularity-value
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 1rem
 
   clearfix()
@@ -300,23 +299,23 @@ a
   h1
     text-transform: uppercase
     font-size: 2.5rem
-    line-height: $regularity-value * 2
+    line-height: 1rem; * 2
     margin-top: $complement * 4
     margin-bottom: $complement * 4
 
   h2
     font-size: 2.2rem
-    line-height: $regularity-value * 2
+    line-height: 1rem; * 2
     margin-top: 1.5rem
 
   h3
     font-size: 1.5rem
-    line-height: $regularity-value * 2
+    line-height: 1rem; * 2
     margin-top: 1.5rem
     
   h4
     font-size: 1.25rem
-    line-height: $regularity-value
+    line-height: 1rem;
     margin-top: 2.5rem
     margin-bottom: $complement * 2
   
@@ -325,13 +324,13 @@ a
 
   h5
     font-size: 1.20rem
-    line-height: $regularity-value
-    margin-top: $complement
+    line-height: 1rem;
     margin-bottom: $complement
+    margin-top: 2rem;
   
   h6
     font-size: 1.1rem
-    line-height: $regularity-value
+    line-height: 1rem;
     margin-top: $complement
     margin-bottom: $complement
     
@@ -350,7 +349,7 @@ a
 
   // Small headings
   .small-heading
-    // line-height: $regularity-value
+    // line-height: 1rem;
 
   h1:first-child
     padding-top: 0
@@ -368,7 +367,7 @@ a
   .content
     padding: $minipad
     padding-top: $minipad * 2
-    line-height: $regularity-value
+    line-height: 1rem;
 
     h4, h5, .small-heading, body:not(.big-h3) & h3
       // padding-top: $vmargin
