@@ -121,7 +121,7 @@ antialias()
 global-reset()
 
 html
-  font-size: 1em;
+  font-size: 1.0625rem;
 
 html, body
   height: 100%
@@ -192,13 +192,13 @@ a
     padding-top: 0
 
   strong, b
-    line-height: 1rem;
+    line-height: 1rem
     font-weight: bold
 
   i, em
     font-style: italic
     padding-right: 0.2rem
-    line-height: 1rem;
+    line-height: 1rem
 
   code
     font-family: $mono-font
@@ -274,8 +274,8 @@ a
   position: relative
 
 .content
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem
+  padding-right: 1.5rem
   padding-top: 1rem
 
   clearfix()
@@ -299,23 +299,23 @@ a
   h1
     text-transform: uppercase
     font-size: 2.5rem
-    line-height: 1rem; * 2
+    line-height: 1rem * 2
     margin-top: $complement * 4
-    margin-bottom: $complement * 4
+    margin-bottom: $complement * 4 //complement 0.25rem
 
   h2
     font-size: 2.2rem
-    line-height: 1rem; * 2
+    line-height: 1rem * 2
     margin-top: 1.5rem
 
   h3
     font-size: 1.5rem
-    line-height: 1rem; * 2
+    line-height: 1rem * 2
     margin-top: 1.5rem
     
   h4
     font-size: 1.25rem
-    line-height: 1rem;
+    line-height: 1rem
     margin-top: 2.5rem
     margin-bottom: $complement * 2
   
@@ -324,17 +324,17 @@ a
 
   h5
     font-size: 1.1rem
-    line-height: 2rem;
-    margin-bottom: 0;
-    margin-top: 1rem;
-    color: hsl(0, 0%, 51%);
+    line-height: 2rem
+    margin-bottom: 0
+    margin-top: 1rem
+    color: hsl(0, 0%, 51%)
     
   h5 + *
-    margin-top:0;
+    margin-top:0
   
   h6
     font-size: 1.1rem
-    line-height: 1rem;
+    line-height: 1rem
     margin-top: $complement
     margin-bottom: $complement
     
@@ -343,6 +343,7 @@ a
     &:after
       display: block
       content: ''
+      margin-top: 1rem
       border-bottom: 0.1rem solid #e2e7e9
   
   h1, h2, h3, .big-heading
@@ -375,6 +376,10 @@ a
 
     h4, h5, .small-heading, body:not(.big-h3) & h3
       // padding-top: $vmargin
+    p
+      line-height: 1.5rem
+    ul
+      line-height: 1.2rem
 
 // ----------------------------------------------------------------------------
 // Code blocks
@@ -404,7 +409,8 @@ body.no-literate .content pre > code
 
 @media (min-width: 87rem) /* Big desktop */
   .content
-    //max-width: 80rem
+    margin: 0 auto 
+    // max-width: 80rem
 
 // ----------------------------------------------------------------------------
 // Header
@@ -658,10 +664,6 @@ code
     
 
 // paragaph indents
-
-p{
-  display: block;
-}
 
 /*
 h4,
