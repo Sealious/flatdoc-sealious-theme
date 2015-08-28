@@ -125,7 +125,7 @@ a img {
   border: none;
 }
 html {
-  font-size: 1em;
+  font-size: 1.0625rem;
 }
 html,
 body {
@@ -315,8 +315,8 @@ a:hover {
   position: relative;
 }
 .content {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-top: 1rem;
   zoom: 1;
   max-width: 43rem;
@@ -347,21 +347,18 @@ a:hover {
 .content h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
-  line-height: 1rem;
-  *: 2;
+  line-height: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .content h2 {
   font-size: 2.2rem;
-  line-height: 1rem;
-  *: 2;
+  line-height: 2rem;
   margin-top: 1.5rem;
 }
 .content h3 {
   font-size: 1.5rem;
-  line-height: 1rem;
-  *: 2;
+  line-height: 2rem;
   margin-top: 1.5rem;
 }
 .content h4 {
@@ -393,6 +390,7 @@ a:hover {
 .content .big-heading:after {
   display: block;
   content: '';
+  margin-top: 1rem;
   border-bottom: 0.1rem solid #e2e7e9;
 }
 .content h1,
@@ -417,6 +415,12 @@ a:hover {
     padding: 1rem;
     padding-top: 2rem;
     line-height: 1rem;
+  }
+  .content p {
+    line-height: 1.5rem;
+  }
+  .content ul {
+    line-height: 1.2rem;
   }
 }
 body.no-literate .content pre > code {
@@ -471,6 +475,11 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 }
 .content .button + em {
   color: #000;
+}
+@media (min-width: 87rem) {
+  .content {
+    margin: 0 auto;
+  }
 }
 .header {
   background: #fff;
@@ -759,9 +768,6 @@ code .comment {
 .title-area > div {
   position: relative;
   z-index: 1;
-}
-p {
-  display: block;
 }
 /*
 h4,
